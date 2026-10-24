@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+LV_env/
+venv/
+.venv/
+
+# Django
+.env
+.env.*
+!.env.example
+*.sqlite3
+
+# React
+node_modules/
+build/
+dist/
+
+
+# IDE and logs
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
+
+oorkaran_backup.json

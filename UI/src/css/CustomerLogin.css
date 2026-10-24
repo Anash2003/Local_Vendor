@@ -1,0 +1,225 @@
+/* Customer Login */
+
+.login-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+}
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    background: var(--cards);
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    border: 1px solid var(--cream);
+
+    box-shadow: 0 15px 40px var(--shadow-color);
+
+}
+
+.login-logo {
+
+    width: 60px;
+
+    height: 60px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--light-blue);
+
+    color: var(--primary);
+
+    border-radius: 16px;
+
+    font-size: 28px;
+
+}
+
+.login-label {
+
+    color: var(--primary);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+
+}
+
+.login-card h2 {
+
+    color: var(--dark);
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+}
+
+.login-subtitle {
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+
+}
+
+.login-card .form-label {
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+.login-input {
+
+    height: 48px;
+
+    border: 1px solid var(--cream-border);
+
+    border-radius: 10px;
+
+    padding: 0 14px;
+
+    background: var(--cards);
+
+}
+
+.login-input::placeholder {
+
+    color: var(--text-light);
+
+}
+
+.login-input:focus {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 3px var(--light-blue);
+
+}
+
+.login-submit {
+
+    height: 48px;
+
+    background: var(--primary);
+
+    color: var(--cards);
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    margin-top: 10px;
+
+    transition: 0.2s ease;
+
+}
+
+.login-submit:hover {
+
+    background: var(--primary-dark);
+
+    color: var(--cards);
+
+}
+
+.register-text {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+}
+
+.register-link {
+
+    border: none;
+
+    background: transparent;
+
+    padding: 0;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+.register-link:hover {
+
+    color: var(--primary-dark);
+
+    text-decoration: underline;
+
+}
+
+@media (min-width: 576px) {
+
+    .login-card {
+
+        padding: 40px 35px;
+
+    }
+
+}
+
+.forgot-password-link {
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+
+}
+
+.forgot-password-link:hover {
+
+    color: var(--dark);
+
+    text-decoration: underline;
+
+}

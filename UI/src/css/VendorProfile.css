@@ -1,0 +1,593 @@
+.vendor-profile-page {
+
+    min-height: 100vh;
+
+    background-color: var(--background);
+
+    color: var(--dark);
+
+}
+
+/* Header */
+
+.vendor-profile-header {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 16px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid var(--gray-200);
+
+}
+
+.vendor-profile-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    align-self: flex-start;
+
+    padding: 0;
+
+    border: none;
+
+    background: var(--transparent);
+
+    color: var(--dark);
+
+    cursor: pointer;
+
+    text-align: left;
+
+}
+
+.vendor-profile-brand img {
+
+    width: 44px;
+
+    height: 44px;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+}
+
+.vendor-profile-brand span {
+
+    line-height: 1.3;
+
+}
+
+.vendor-profile-brand:focus-visible {
+
+    outline: 3px solid var(--shadow-primary-strong);
+
+    outline-offset: 4px;
+
+    border-radius: 5px;
+
+}
+
+.vendor-profile-header-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+}
+
+.vendor-profile-header-actions .btn {
+
+    flex: 1;
+
+    min-height: 42px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+/* Main profile card */
+
+.vendor-profile-card {
+
+    padding: 22px 16px;
+
+    background-color: var(--cards);
+
+    border: 1px solid var(--gray-100);
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 30px var(--shadow-light);
+
+}
+
+.vendor-profile-title {
+
+    margin-bottom: 8px;
+
+    color: var(--dark);
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+}
+
+.vendor-profile-card .text-muted {
+
+    color: var(--text-muted) !important;
+
+    line-height: 1.6;
+
+}
+
+.vendor-profile-card .form-label {
+
+    margin-bottom: 8px;
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+}
+
+.vendor-profile-card .form-control {
+
+    min-height: 46px;
+
+    padding: 10px 12px;
+
+    border: 1px solid var(--gray-300);
+
+    border-radius: 9px;
+
+    background-color: var(--cards);
+
+    color: var(--dark);
+
+    font-size: 15px;
+
+}
+
+.vendor-profile-card textarea.form-control {
+
+    min-height: 130px;
+
+    resize: vertical;
+
+}
+
+.vendor-profile-card .form-control:focus {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 0.2rem var(--shadow-primary-light);
+
+}
+
+.vendor-profile-card .alert {
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+
+}
+
+/* Account verification status */
+
+.vendor-status-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    border: 1px solid var(--orange-border);
+
+    border-radius: 12px;
+
+    background-color: var(--light-blue);
+
+}
+
+.vendor-status-box .badge {
+
+    padding: 7px 11px;
+
+    font-size: 12px;
+
+    text-transform: capitalize;
+
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+
+}
+
+/* Profile image */
+
+.vendor-profile-image-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 116px;
+
+    height: 116px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border: 4px solid var(--orange-soft-2);
+
+    border-radius: 50%;
+
+    background-color: var(--light-blue);
+
+}
+
+.vendor-profile-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.vendor-profile-placeholder {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    height: 100%;
+
+    color: var(--primary-dark);
+
+    font-size: 42px;
+
+}
+
+.vendor-profile-card .btn-outline-warning {
+
+    min-height: 42px;
+
+    border-color: var(--primary);
+
+    border-radius: 9px;
+
+    color: var(--orange-dark-text);
+
+    font-weight: 600;
+
+}
+
+.vendor-profile-card .btn-outline-warning:hover {
+
+    background-color: var(--primary);
+
+    color: var(--cards);
+
+}
+
+/* Section headings */
+
+.vendor-profile-section-heading {
+
+    margin-bottom: 16px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid var(--gray-200);
+
+    color: var(--dark);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+}
+
+/* Save button */
+
+.vendor-profile-save-btn {
+
+    min-height: 46px;
+
+    padding: 10px 16px;
+
+    border: 1px solid var(--primary);
+
+    border-radius: 10px;
+
+    background-color: var(--primary);
+
+    color: var(--cards);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: background-color 0.2s ease;
+
+}
+
+.vendor-profile-save-btn:hover {
+
+    border-color: var(--primary-dark);
+
+    background-color: var(--primary-dark);
+
+    color: var(--cards);
+
+}
+
+.vendor-profile-save-btn:disabled {
+
+    cursor: not-allowed;
+
+    opacity: 0.7;
+
+}
+
+/* In-app modal overlay */
+
+.vendor-profile-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1040;
+
+    background-color: var(--modal-overlay-strong);
+
+    backdrop-filter: blur(4px);
+
+}
+
+/* Confirmation and access modals */
+
+.vendor-profile-modal {
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    z-index: 1050;
+
+    width: calc(100% - 32px);
+
+    max-width: 440px;
+
+    max-height: calc(100% - 32px);
+
+    overflow-y: auto;
+
+    padding: 25px 20px;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid var(--modal-border);
+
+    border-radius: 18px;
+
+    background-color: var(--cards);
+
+    box-shadow: 0 20px 60px var(--shadow-dark);
+
+    text-align: center;
+
+    animation: vendorProfileModalAppear 0.22s ease-out;
+
+}
+
+.vendor-profile-modal-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 64px;
+
+    height: 64px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background-color: var(--light-blue);
+
+    color: var(--primary-dark);
+
+    font-size: 28px;
+
+}
+
+.vendor-profile-modal h2 {
+
+    margin-bottom: 12px;
+
+    color: var(--dark);
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+}
+
+.vendor-profile-modal p {
+
+    margin-bottom: 0;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    overflow-wrap: anywhere;
+
+}
+
+.vendor-profile-modal .btn {
+
+    min-height: 44px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+/* Modal entrance animation */
+
+@keyframes vendorProfileModalAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translate(-50%, -47%);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translate(-50%, -50%);
+
+    }
+
+}
+
+/* Tablet and desktop */
+
+@media (min-width: 576px) {
+
+    .vendor-profile-header {
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+    }
+
+    .vendor-profile-header-actions {
+
+        flex: 0 0 auto;
+
+    }
+
+    .vendor-profile-header-actions .btn {
+
+        flex: 0 0 auto;
+
+        min-width: 125px;
+
+        font-size: 14px;
+
+    }
+
+    .vendor-profile-card {
+
+        padding: 32px 28px;
+
+        border-radius: 20px;
+
+    }
+
+    .vendor-profile-title {
+
+        font-size: 29px;
+
+    }
+
+    .vendor-status-box {
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+    }
+
+    .vendor-profile-modal {
+
+        padding: 32px 28px;
+
+    }
+
+    .vendor-profile-modal h2 {
+
+        font-size: 23px;
+
+    }
+
+}
+
+/* Respect reduced-motion settings */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .vendor-profile-modal {
+
+        animation: none;
+
+    }
+
+    .vendor-profile-save-btn {
+
+        transition: none;
+
+    }
+
+}

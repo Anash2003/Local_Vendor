@@ -1,0 +1,415 @@
+
+
+@import "./css/Home.css";
+
+@import "./css/CustomerLogin.css";
+@import "./css/CustomerRegister.css";
+@import "./css/VendorLogin.css";
+@import "./css/VendorRegister.css";
+
+@import "./css/CustomerDashboard.css";
+@import "./css/CustomerProfile.css";
+@import "./css/SearchVendors.css";
+@import "./css/VendorDetails.css";
+@import "./css/MyBookings-cus.css";
+@import "./css/CustomerProfile.css";
+@import "./css/BookingCard.css";
+
+@import "./css/VendorDashboard.css";
+@import "./css/VendorServices.css";
+@import "./css/VendorProfile.css";
+@import "./css/VendorBookings.css";
+@import "./css/VendorAvailability.css";
+@import "./css/ManageServices.css";
+
+@import "./css/AdminDashboard.css";
+@import "./css/PendingVendors.css";
+
+@import "./css/Navbar.css";
+@import "./css/Footer.css";
+@import "./css/About.css";
+@import "./css/Contact.css";
+
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+@import "./css/CustomerForgotPassword.css";
+@import "./css/VendorForgotPassword.css";
+
+@import "./css/AdminLogin.css";
+@import "./css/AdminProfile.css";
+@import "./css/VendorVerification.css";
+@import "./css/BookingManagement.css";
+@import "./css/CustomerManagement.css";
+@import "./css/CategoriesServices.css";
+@import "./css/RatingsReviews.css";
+@import "./css/AddAdmin.css";
+
+
+:root {
+
+    /* =========================================
+       MAIN OORKARAN THEME
+    ========================================= */
+
+    --background: #FFFCF8;
+    --primary: #F59E0B;
+    --primary-dark: #D97706;
+    --primary-accent: #FBBF24;
+
+    --dark: #0F172A;
+
+    --cards: #FFFFFF;
+    --light-blue: #FFF7ED;
+
+    /* =========================================
+       TEXT COLORS
+    ========================================= */
+
+    --text: #334155;
+    --text-muted: #64748B;
+    --text-light: #94A3B8;
+    --text-dark-gray: #475569;
+    --text-gray: #6B7280;
+
+    /* =========================================
+       COMMON GRAY / NEUTRAL COLORS
+    ========================================= */
+
+    --gray-50: #F8FAFC;
+    --gray-100: #F1F5F9;
+    --gray-200: #E2E8F0;
+    --gray-300: #CBD5E1;
+    --gray-400: #94A3B8;
+    --gray-500: #64748B;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-800: #1F2937;
+
+    --neutral-light: #F1F1F1;
+    --neutral-lighter: #F8F8F8;
+    --neutral-border: #E5E7EB;
+    --neutral-soft: #E2E8F0;
+    --neutral-warm: #EEE7DC;
+
+    /* =========================================
+       BORDERS
+    ========================================= */
+
+    --border: #E1E5EA;
+    --border-light: #DBE1E8;
+    --border-section: #E5E7EB;
+    --border-soft: #E2E8F0;
+    --border-gray: #DFE3E8;
+    --border-muted: #CBD5E1;
+
+    /* =========================================
+       ORANGE / PRIMARY SOFT COLORS
+    ========================================= */
+
+    --orange-soft: #FFF7ED;
+    --orange-light: #FFF4E5;
+    --orange-lighter: #FFF3D6;
+    --orange-soft-2: #FFEDD5;
+    --orange-border: #FED7AA;
+    --orange-dark-text: #92400E;
+    --orange-dark: #9A3412;
+    --orange-deep: #B45309;
+    --orange-medium: #C2410C;
+    --orange-bright: #F97316;
+
+    /* =========================================
+       SUCCESS / GREEN COLORS
+    ========================================= */
+
+    --success: #16A34A;
+    --success-dark: #15803D;
+    --success-deep: #166534;
+    --success-bright: #22C55E;
+    --success-emerald: #059669;
+    --success-teal: #047857;
+
+    --success-bg: #F0FDF4;
+    --success-light-bg: #DCFCE7;
+    --success-hover-bg: #BBF7D0;
+    --success-border: #86EFAC;
+    --success-border-light: #BBF7D0;
+    --success-text: #15803D;
+
+    /* =========================================
+       DANGER / RED COLORS
+    ========================================= */
+
+    --danger: #DC2626;
+    --danger-dark: #B91C1C;
+    --danger-deep: #991B1B;
+    --danger-bright: #EF4444;
+
+    --danger-bg: #FEF2F2;
+    --danger-light-bg: #FEE2E2;
+    --danger-border: #FCA5A5;
+    --danger-border-light: #FECACA;
+    --danger-text: #B91C1C;
+
+    /* =========================================
+       WARNING / YELLOW COLORS
+    ========================================= */
+
+    --warning: #F59E0B;
+    --warning-light: #FEF3C7;
+    --warning-bg: #FFFBEB;
+    --warning-border: #FDE68A;
+    --warning-text: #92400E;
+
+    /* =========================================
+       BLUE / INFORMATION COLORS
+    ========================================= */
+
+    --info: #2563EB;
+    --info-dark: #1D4ED8;
+    --info-bg: #DBEAFE;
+    --info-text: #1D4ED8;
+
+    /* =========================================
+       PURPLE COLORS
+    ========================================= */
+
+    --purple: #8B5CF6;
+    --purple-light: #A78BFA;
+    --purple-bg: #EDE9FE;
+    --purple-text: #6D28D9;
+
+    --purple-soft-bg: #FAF5FF;
+    --purple-soft-border: #E9D5FF;
+    --purple-soft-text: #7E22CE;
+
+    /* =========================================
+       VENDOR CARD COLORS
+    ========================================= */
+
+    --vendor-card-bg: #FFF4E5;
+    --vendor-card-border: #FED7AA;
+    --vendor-card-selected-bg: #FFEDD5;
+
+    /* =========================================
+       BOOKING STATUS COLORS
+    ========================================= */
+
+    /* Pending */
+    --status-pending-bg: #FEF3C7;
+    --status-pending-text: #92400E;
+
+    /* Accepted */
+    --status-accepted-bg: #DCFCE7;
+    --status-accepted-text: #166534;
+
+    /* Ongoing */
+    --status-ongoing-bg: #DBEAFE;
+    --status-ongoing-text: #1D4ED8;
+
+    /* Rejected */
+    --status-rejected-bg: #FEE2E2;
+    --status-rejected-text: #B91C1C;
+
+    /* Completed */
+    --status-completed-bg: #EDE9FE;
+    --status-completed-text: #6D28D9;
+
+    /* Cancelled */
+    --status-cancelled-bg: #F1F5F9;
+    --status-cancelled-text: #64748B;
+
+    /* =========================================
+       AVAILABILITY CALENDAR COLORS
+    ========================================= */
+
+    /* Available */
+    --available-bg: #DCFCE7;
+    --available-border: #4ADE80;
+    --available-text: #166534;
+    --available-hover-bg: #BBF7D0;
+    --available-hover-border: #16A34A;
+    --available-hover-text: #14532D;
+    --available-legend: #22C55E;
+
+    /* Selected */
+    --selected-bg: var(--primary);
+    --selected-border: var(--primary);
+    --selected-text: var(--cards);
+
+    /* Unavailable */
+    --unavailable-bg: #FEE2E2;
+    --unavailable-border: #F87171;
+    --unavailable-text: #B91C1C;
+    --unavailable-legend: #EF4444;
+
+    /* Weekly Off */
+    --weekoff-bg: #FEF3C7;
+    --weekoff-border: #FBBF24;
+    --weekoff-text: #92400E;
+    --weekoff-legend: #F59E0B;
+
+    /* Booked */
+    --booked-bg: #EDE9FE;
+    --booked-border: #A78BFA;
+    --booked-text: #6D28D9;
+    --booked-legend: #8B5CF6;
+
+    /* Past */
+    --past-bg: #F1F5F9;
+    --past-border: #CBD5E1;
+    --past-text: #94A3B8;
+    --past-legend: #9CA3AF;
+
+    /* =========================================
+       ERROR / SUCCESS / WARNING UI
+    ========================================= */
+
+    --error-bg: #FEF2F2;
+    --error-border: #FECACA;
+    --error-text: #B91C1C;
+
+    --success-message-bg: #F0FDF4;
+    --success-message-border: #BBF7D0;
+    --success-message-text: #15803D;
+
+    --warning-message-bg: #FFFBEB;
+    --warning-message-border: #FDE68A;
+    --warning-message-text: #92400E;
+
+    /* =========================================
+       CONTACT PAGE COLORS
+    ========================================= */
+
+    --contact-border: #E2E8F0;
+    --contact-text: #334155;
+    --contact-muted: #64748B;
+    --contact-light: #94A3B8;
+
+    --contact-success: #16A34A;
+    --contact-success-bg: #F0FDF4;
+    --contact-success-border: #86EFAC;
+
+    --contact-danger: #DC2626;
+    --contact-danger-bg: #FEF2F2;
+    --contact-danger-border: #FCA5A5;
+
+    --contact-star: #F59E0B;
+    --contact-star-bg: #FFF7ED;
+
+    --contact-soft-orange: #FFEDD5;
+    --contact-soft-border: #FED7AA;
+
+    /* =========================================
+       SHADOW COLORS
+    ========================================= */
+
+    --shadow-color: rgba(15, 23, 42, 0.08);
+    --shadow-light: rgba(15, 23, 42, 0.06);
+    --shadow-medium: rgba(15, 23, 42, 0.10);
+    --shadow-dark: rgba(15, 23, 42, 0.13);
+
+    --shadow-primary: rgba(245, 158, 11, 0.20);
+    --shadow-primary-light: rgba(245, 158, 11, 0.15);
+    --shadow-primary-soft: rgba(245, 158, 11, 0.12);
+    --shadow-primary-faint: rgba(245, 158, 11, 0.08);
+    --shadow-primary-strong: rgba(245, 158, 11, 0.30);
+    --shadow-primary-focus: rgba(245, 158, 11, 0.35);
+
+    /* =========================================
+       MODAL / OVERLAY COLORS
+    ========================================= */
+
+    --modal-overlay: rgba(15, 23, 42, 0.55);
+    --modal-overlay-dark: rgba(15, 23, 42, 0.62);
+    --modal-overlay-strong: rgba(15, 23, 42, 0.65);
+    --modal-overlay-soft: rgba(15, 23, 42, 0.72);
+
+    --modal-border: rgba(226, 232, 240, 0.8);
+    --modal-white-soft: rgba(255, 255, 255, 0.92);
+    --modal-white-light: rgba(255, 255, 255, 0.75);
+    --modal-white-faint: rgba(255, 255, 255, 0.40);
+    --modal-white-transparent: rgba(255, 255, 255, 0.10);
+
+    /* =========================================
+       SPECIAL COLORS
+    ========================================= */
+
+    --black: #000000;
+    --white: #FFFFFF;
+    --transparent: transparent;
+
+    --soft-background: #FFFDF9;
+    --soft-background-2: #FFFDF8;
+    --soft-background-3: #FFFDFA;
+
+    --cream: #F3E8D5;
+    --cream-border: #E5D8C5;
+
+    --light-gray: #EDF0F2;
+    --light-gray-2: #F1F1F1;
+
+    /* =========================================
+       GRADIENTS
+    ========================================= */
+
+    --gradient-soft:
+        linear-gradient(135deg, #FFFDF8 0%, #FFFFFF 70%);
+
+    --gradient-light:
+        linear-gradient(135deg, #FFF7ED, #FFFFFF);
+
+    /* =========================================
+       BACKDROP / EFFECTS
+    ========================================= */
+
+    --backdrop-orange: rgba(245, 158, 11, 0.13);
+    --backdrop-orange-light: rgba(245, 158, 11, 0.10);
+    --backdrop-orange-medium: rgba(245, 158, 11, 0.22);
+
+    --backdrop-dark-light: rgba(15, 23, 42, 0.07);
+    --backdrop-dark-medium: rgba(15, 23, 42, 0.09);
+    --backdrop-dark-strong: rgba(15, 23, 42, 0.25);
+    --backdrop-dark-extra: rgba(15, 23, 42, 0.35);
+    --shadow-success-hover: rgba(22, 163, 74, 0.18);
+    --contact-border-white: rgba(255, 255, 255, 0.10);
+--contact-primary-outline: rgba(245, 158, 11, 0.25);
+--customer-navbar-bg: rgba(255, 252, 248, 0.96);
+
+--customer-modal-overlay: rgba(15, 23, 42, 0.52);
+--customer-modal-border: rgba(255, 255, 255, 0.7);
+
+--customer-primary-focus-border: rgba(245, 158, 11, 0.55);
+
+--customer-rating-border: #FDE7BD;
+
+--customer-success-bg: #ECFDF5;
+--customer-success-border: #A7F3D0;
+--profile-border: #EEEEEE;
+--profile-account-bg: #FAFAFA;
+--profile-modal-shadow: rgba(15, 23, 42, 0.20);
+--home-shadow: rgba(23, 32, 51, 0.08);
+--category-border: #E8EDF5;
+--category-shadow: rgba(23, 32, 51, 0.05);
+--category-hover-shadow: rgba(37, 99, 235, 0.12);
+--login-message-border: #BFDBFE;
+--warning-border-custom: #FCD34D;
+--info-bg-custom: #EFF6FF;
+--info-border-custom: #93C5FD;
+--purple-custom: #7C3AED;
+--purple-bg-custom: #F5F3FF;
+--purple-border-custom: #C4B5FD;
+--gray-bg-custom: #F3F4F6;
+--gray-border-custom: #D1D5DB;
+--calendar-weekoff-legend: #A855F7;
+--availability-modal-border: rgba(226, 232, 240, 0.9);
+--booking-modal-shadow-color: rgba(0, 0, 0, 0.20);
+--spinner-white-border: rgba(255, 255, 255, 0.40);
+--vendor-service-selected-bg: #FFFAF0;
+--vendor-service-border: #FDE7BE;
+--vendor-login-focus-outline: rgba(245, 158, 11, 0.30);
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+}

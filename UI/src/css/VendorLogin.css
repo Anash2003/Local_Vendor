@@ -1,0 +1,578 @@
+/* =================================
+   Vendor Login Page
+================================= */
+
+.vendor-login-page {
+
+    min-height: 100vh;
+
+    background-color: var(--background);
+}
+
+
+/* =================================
+   Login Card
+================================= */
+
+.vendor-login-card {
+
+    background-color: var(--cards);
+
+    border-radius: 20px;
+
+    padding: 25px 20px;
+
+    box-shadow: 0 8px 30px var(--shadow-color);
+}
+
+
+/* =================================
+   Logo
+================================= */
+
+.vendor-login-logo {
+
+    width: 90px;
+
+    height: 90px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+.vendor-login-logo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.vendor-login-logo:hover {
+
+    transform: scale(1.04);
+}
+
+.vendor-login-logo:focus {
+
+    outline: 3px solid var(--vendor-login-focus-outline);
+
+    outline-offset: 3px;
+}
+
+
+/* =================================
+   Headings
+================================= */
+
+.vendor-login-card h1 {
+
+    color: var(--dark);
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.vendor-login-card h2 {
+
+    color: var(--dark);
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.vendor-login-card p {
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =================================
+   Form
+================================= */
+
+.vendor-login-card .form-label {
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.vendor-login-input {
+
+    min-height: 46px;
+
+    border: 1px solid var(--gray-200);
+
+    border-radius: 10px;
+
+    padding: 10px 13px;
+
+    font-size: 15px;
+}
+
+.vendor-login-input:focus {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 0.2rem var(--shadow-primary-light);
+}
+
+
+/* =================================
+   Login Button
+================================= */
+
+.vendor-login-submit {
+
+    min-height: 46px;
+
+    background-color: var(--primary);
+
+    border: none;
+
+    border-radius: 10px;
+
+    color: var(--cards);
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.vendor-login-submit:hover {
+
+    background-color: var(--primary-dark);
+
+    color: var(--cards);
+}
+
+.vendor-login-submit:active {
+
+    transform: scale(0.98);
+}
+
+
+/* =================================
+   Register Link
+================================= */
+
+.vendor-register-text {
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+}
+
+.vendor-register-link {
+
+    background: none;
+
+    border: none;
+
+    padding: 0;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.vendor-register-link:hover {
+
+    color: var(--primary-dark);
+
+    text-decoration: underline;
+}
+
+
+/* =================================
+   Forgot Password
+================================= */
+
+.forgot-password-link {
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.forgot-password-link:hover {
+
+    color: var(--primary-dark);
+
+    text-decoration: underline;
+}
+
+
+/* =================================
+   Error Alert
+================================= */
+
+.vendor-login-card .alert {
+
+    border-radius: 10px;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   Logout Confirmation Modal
+================================= */
+
+.vendor-login-page .modal-content {
+
+    border: none;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+}
+
+.vendor-login-page .modal-header {
+
+    padding: 16px 18px;
+
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.vendor-login-page .modal-title {
+
+    color: var(--dark);
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+.vendor-login-page .modal-body {
+
+    padding: 18px;
+}
+
+.vendor-login-page .modal-body p {
+
+    color: var(--text-dark-gray);
+
+    margin-bottom: 0;
+}
+
+.vendor-login-page .modal-footer {
+
+    padding: 14px 18px;
+
+    border-top: 1px solid var(--gray-200);
+}
+
+.vendor-login-page .modal-footer .btn {
+
+    min-height: 42px;
+
+    border-radius: 9px;
+
+    font-weight: 600;
+}
+
+
+/* Confirm button */
+
+.vendor-modal-confirm {
+
+    background-color: var(--primary);
+
+    border-color: var(--primary);
+
+    color: var(--cards);
+}
+
+.vendor-modal-confirm:hover {
+
+    background-color: var(--primary-dark);
+
+    border-color: var(--primary-dark);
+
+    color: var(--cards);
+}
+
+
+/* =================================
+   Tablet
+================================= */
+
+@media (min-width: 576px) {
+
+    .vendor-login-card {
+
+        padding: 35px;
+
+    }
+
+    .vendor-login-logo {
+
+        width: 100px;
+
+        height: 100px;
+
+    }
+
+    .vendor-login-card h1 {
+
+        font-size: 28px;
+
+    }
+
+    .vendor-login-card h2 {
+
+        font-size: 24px;
+
+    }
+
+}
+
+
+/* Verification modal overlay */
+
+.vendor-verification-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: var(--modal-overlay-strong);
+
+    backdrop-filter: blur(5px);
+
+    z-index: 1040;
+
+}
+
+
+/* Verification modal */
+
+.vendor-verification-modal {
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: calc(100% - 32px);
+
+    max-width: 460px;
+
+    max-height: calc(100vh - 32px);
+
+    overflow-y: auto;
+
+    padding: 30px 22px;
+
+    background: var(--cards);
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 60px var(--backdrop-dark-strong);
+
+    z-index: 1050;
+
+    animation: vendorModalAppear 0.25s ease-out;
+
+}
+
+.vendor-verification-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 76px;
+
+    height: 76px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background: var(--light-blue);
+
+    color: var(--primary-dark);
+
+    font-size: 36px;
+
+}
+
+.vendor-verification-badge {
+
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    margin-bottom: 16px;
+
+    border-radius: 30px;
+
+    background: var(--light-blue);
+
+    color: var(--orange-dark-text);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+.vendor-verification-modal h2 {
+
+    color: var(--dark);
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    margin-bottom: 14px;
+
+}
+
+.vendor-verification-modal p {
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 14px;
+
+}
+
+.vendor-verification-primary {
+
+    min-height: 46px;
+
+    margin-top: 8px;
+
+    border: 1px solid var(--primary);
+
+    border-radius: 10px;
+
+    background: var(--primary);
+
+    color: var(--cards);
+
+    font-weight: 600;
+
+}
+
+.vendor-verification-primary:hover {
+
+    background: var(--primary-dark);
+
+    border-color: var(--primary-dark);
+
+    color: var(--cards);
+
+}
+
+.vendor-verification-secondary {
+
+    min-height: 44px;
+
+    border: 1px solid var(--gray-200);
+
+    border-radius: 10px;
+
+    background: var(--cards);
+
+    color: var(--dark);
+
+    font-weight: 600;
+
+}
+
+.vendor-verification-secondary:hover {
+
+    background: var(--gray-50);
+
+    border-color: var(--gray-300);
+
+}
+
+@keyframes vendorModalAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translate(-50%, -47%);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translate(-50%, -50%);
+
+    }
+
+}
+
+@media (min-width: 576px) {
+
+    .vendor-verification-modal {
+
+        padding: 36px 32px;
+
+    }
+
+    .vendor-verification-modal h2 {
+
+        font-size: 25px;
+
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .vendor-verification-modal {
+
+        animation: none;
+
+    }
+
+}

@@ -1,0 +1,351 @@
+/* ================================
+   Vendor Services Page
+================================ */
+
+.vendor-services-page {
+
+    min-height: 100vh;
+
+    background: var(--background);
+
+    padding: 30px 0 60px;
+
+}
+
+
+/* ================================
+   Back Button
+================================ */
+
+.vendor-services-back-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: var(--cards);
+
+    color: var(--dark);
+
+    border: 1px solid var(--neutral-border);
+
+    border-radius: 10px;
+
+    padding: 10px 16px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+
+}
+
+.vendor-services-back-btn:hover {
+
+    background: var(--light-blue);
+
+    color: var(--primary);
+
+    border-color: var(--primary-accent);
+
+    transform: translateX(-2px);
+
+}
+
+
+/* ================================
+   Main Card
+================================ */
+
+.vendor-services-card {
+
+    width: 100%;
+
+    max-width: 560px;
+
+    margin: 35px auto 0;
+
+    background: var(--cards);
+
+    border: 1px solid var(--neutral-light);
+
+    border-radius: 20px;
+
+    padding: 38px 40px;
+
+    box-shadow:
+        0 10px 30px var(--backdrop-dark-light);
+
+    transition: 0.2s ease;
+
+}
+
+.vendor-services-card:hover {
+
+    box-shadow:
+        0 14px 35px var(--backdrop-dark-medium);
+
+}
+
+
+/* ================================
+   Header Icon
+================================ */
+
+.vendor-services-icon {
+
+    width: 64px;
+
+    height: 64px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--light-blue);
+
+    color: var(--primary);
+
+    border-radius: 16px;
+
+    font-size: 27px;
+
+}
+
+
+/* ================================
+   Heading
+================================ */
+
+.vendor-services-card h2 {
+
+    margin-bottom: 8px;
+
+    color: var(--dark);
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+}
+
+.vendor-services-card p {
+
+    margin-bottom: 0;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ================================
+   Form
+================================ */
+
+.vendor-services-card .form-label {
+
+    margin-bottom: 8px;
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+/* ================================
+   Select Boxes
+================================ */
+
+.vendor-services-card .form-select {
+
+    height: 48px;
+
+    padding: 0 42px 0 14px;
+
+    border: 1px solid var(--border-gray);
+
+    border-radius: 10px;
+
+    background-color: var(--cards);
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+    box-shadow: none;
+
+    transition: all 0.2s ease;
+
+}
+
+.vendor-services-card .form-select:hover {
+
+    border-color: var(--gray-300);
+
+}
+
+.vendor-services-card .form-select:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px var(--shadow-primary-soft);
+
+    outline: none;
+
+}
+
+.vendor-services-card .form-select:disabled {
+
+    background-color: var(--gray-50);
+
+    color: var(--text-light);
+
+    cursor: not-allowed;
+
+}
+
+
+/* ================================
+   Add Service Button
+================================ */
+
+.vendor-add-service-btn {
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+
+    color: var(--cards);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 5px 12px var(--shadow-primary);
+
+    transition: all 0.2s ease;
+
+}
+
+.vendor-add-service-btn:hover {
+
+    background: var(--primary-dark);
+
+    color: var(--cards);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 16px var(--contact-primary-outline);
+
+}
+
+.vendor-add-service-btn:active {
+
+    transform: translateY(0);
+
+}
+
+.vendor-add-service-btn i {
+
+    font-size: 13px;
+
+}
+
+
+/* ================================
+   Alerts
+================================ */
+
+.vendor-services-card .alert {
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    padding: 11px 14px;
+
+    margin-bottom: 20px;
+
+}
+
+.vendor-services-card .alert-success {
+
+    border: 1px solid var(--success-hover-bg);
+
+}
+
+.vendor-services-card .alert-danger {
+
+    border: 1px solid var(--danger-border-light);
+
+}
+
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 576px) {
+
+    .vendor-services-page {
+
+        padding: 20px 0 40px;
+
+    }
+
+    .vendor-services-card {
+
+        margin-top: 25px;
+
+        padding: 30px 22px;
+
+        border-radius: 16px;
+
+    }
+
+    .vendor-services-card h2 {
+
+        font-size: 23px;
+
+    }
+
+    .vendor-services-icon {
+
+        width: 58px;
+
+        height: 58px;
+
+        font-size: 24px;
+
+    }
+
+    .vendor-services-back-btn {
+
+        font-size: 13px;
+
+        padding: 9px 13px;
+
+    }
+
+}

@@ -1,0 +1,351 @@
+
+.admin-profile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1055;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.58);
+  overflow-y: auto;
+}
+
+.admin-profile-modal {
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--cards, #ffffff);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+  animation: adminProfileOpen 0.2s ease-out;
+}
+
+.admin-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 24px;
+  background: var(--dark, #0f172a);
+  color: #ffffff;
+  border-radius: 15px 15px 0 0;
+}
+
+.admin-profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  color: var(--dark, #0f172a);
+  background: var(--primary, #f59e0b);
+  border-radius: 50%;
+  font-size: 23px;
+}
+
+.admin-profile-heading {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-profile-heading h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.admin-profile-heading p {
+  margin: 5px 0 0;
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+.admin-profile-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.admin-profile-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.admin-profile-body {
+  padding: 24px;
+}
+
+.admin-profile-section {
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-profile-section:last-of-type {
+  margin-bottom: 18px;
+}
+
+.admin-profile-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-profile-section-heading h3 {
+  margin: 0;
+  color: var(--dark, #0f172a);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.admin-profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 17px;
+}
+
+.admin-profile-field label {
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.admin-profile-field input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  color: var(--dark, #0f172a);
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.admin-profile-field input:focus {
+  outline: none;
+  border-color: var(--primary, #f59e0b);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.admin-profile-value {
+  min-height: 42px;
+  padding: 12px;
+  overflow-wrap: anywhere;
+  color: var(--dark, #0f172a);
+  background: var(--light-blue, #fff7ed);
+  border: 1px solid #f1f5f9;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.admin-profile-text-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 7px 10px;
+  color: #b96b00;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-profile-text-button:hover {
+  background: var(--light-blue, #fff7ed);
+}
+
+.admin-profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.admin-profile-primary-button,
+.admin-profile-secondary-button {
+  min-height: 40px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.admin-profile-primary-button {
+  color: #ffffff;
+  background: var(--primary, #f59e0b);
+  border: 1px solid var(--primary, #f59e0b);
+}
+
+.admin-profile-primary-button:hover:not(:disabled) {
+  background: #d97706;
+  border-color: #d97706;
+}
+
+.admin-profile-secondary-button {
+  color: var(--dark, #0f172a);
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+}
+
+.admin-profile-secondary-button:hover:not(:disabled) {
+  background: #f8fafc;
+}
+
+.admin-profile-primary-button:disabled,
+.admin-profile-secondary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-profile-security-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-profile-security-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  color: #b96b00;
+  background: var(--light-blue, #fff7ed);
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.admin-profile-security-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-profile-security-text h4 {
+  margin: 0;
+  color: var(--dark, #0f172a);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-profile-security-text p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.admin-profile-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  color: #7c520c;
+  background: var(--light-blue, #fff7ed);
+  border: 1px solid #fde7bd;
+  border-radius: 9px;
+  font-size: 12px;
+}
+
+.admin-profile-note i {
+  margin-top: 2px;
+}
+
+.admin-profile-note p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.admin-profile-message {
+  padding: 11px 13px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.admin-profile-message.success {
+  color: #166534;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.admin-profile-message.error {
+  color: #991b1b;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.admin-profile-loading {
+  margin: 0 0 16px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+@keyframes adminProfileOpen {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-profile-overlay {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .admin-profile-modal {
+    max-height: calc(100vh - 24px);
+    margin: auto 0;
+  }
+
+  .admin-profile-header {
+    padding: 18px;
+  }
+
+  .admin-profile-heading h2 {
+    font-size: 18px;
+  }
+
+  .admin-profile-body {
+    padding: 18px;
+  }
+
+  .admin-profile-security-row {
+    flex-wrap: wrap;
+  }
+
+  .admin-profile-actions > button {
+    flex: 1;
+  }
+}

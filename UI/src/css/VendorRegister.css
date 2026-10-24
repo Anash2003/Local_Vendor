@@ -1,0 +1,353 @@
+/* ================================
+   Vendor Register Page
+================================ */
+
+.vendor-register-page {
+
+    min-height: 100vh;
+
+    background-color: var(--background);
+
+}
+
+
+/* ================================
+   Register Card
+================================ */
+
+.vendor-register-card {
+
+    background-color: var(--cards);
+
+    border-radius: 20px;
+
+    padding: 25px 20px;
+
+    box-shadow: 0 8px 30px var(--shadow-color);
+
+}
+
+
+/* ================================
+   Logo
+================================ */
+
+.vendor-register-logo {
+
+    width: 90px;
+
+    height: 90px;
+
+    margin: 0 auto;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    transition: transform 0.2s ease;
+
+}
+
+.vendor-register-logo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.vendor-register-logo:hover {
+
+    transform: scale(1.04);
+
+}
+
+
+/* ================================
+   Headings
+================================ */
+
+.vendor-register-card h1 {
+
+    color: var(--dark);
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+}
+
+.vendor-register-card h2 {
+
+    color: var(--dark);
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+}
+
+.vendor-register-card p {
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ================================
+   Form
+================================ */
+
+.vendor-register-card .form-label {
+
+    color: var(--dark);
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+}
+
+.vendor-register-card .form-control {
+
+    min-height: 46px;
+
+    border: 1px solid var(--gray-200);
+
+    border-radius: 10px;
+
+    padding: 10px 13px;
+
+    font-size: 15px;
+
+}
+
+.vendor-register-card .form-control:focus {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 0.2rem var(--shadow-primary-light);
+
+}
+
+
+/* ================================
+   Register Button
+================================ */
+
+.vendor-register-submit {
+
+    min-height: 46px;
+
+    background-color: var(--primary);
+
+    color: var(--cards);
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+
+}
+
+.vendor-register-submit:hover {
+
+    background-color: var(--primary-dark);
+
+    color: var(--cards);
+
+}
+
+.vendor-register-submit:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* ================================
+   Login Link
+================================ */
+
+.vendor-login-text {
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+}
+
+.vendor-login-link {
+
+    background: none;
+
+    border: none;
+
+    padding: 0;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+.vendor-login-link:hover {
+
+    color: var(--primary-dark);
+
+    text-decoration: underline;
+
+}
+
+
+/* ================================
+   Error Alert
+================================ */
+
+.vendor-register-card .alert {
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+}
+
+
+/* ================================
+   Confirmation Modal
+================================ */
+
+.vendor-register-page .modal-content {
+
+    border: none;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+}
+
+.vendor-register-page .modal-header {
+
+    border-bottom: 1px solid var(--gray-200);
+
+    padding: 16px 18px;
+
+}
+
+.vendor-register-page .modal-title {
+
+    color: var(--dark);
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+}
+
+.vendor-register-page .modal-body {
+
+    padding: 18px;
+
+}
+
+.vendor-register-page .modal-body p {
+
+    color: var(--text-dark-gray);
+
+    margin: 0;
+
+}
+
+.vendor-register-page .modal-footer {
+
+    border-top: 1px solid var(--gray-200);
+
+    padding: 14px 18px;
+
+}
+
+.vendor-register-page .modal-footer .btn {
+
+    min-height: 42px;
+
+    border-radius: 9px;
+
+    font-weight: 600;
+
+}
+
+.vendor-register-page .modal-footer .btn-warning {
+
+    background-color: var(--primary);
+
+    border-color: var(--primary);
+
+    color: var(--cards);
+
+}
+
+
+/* ================================
+   Tablet & Desktop
+================================ */
+
+@media (min-width: 576px) {
+
+    .vendor-register-card {
+
+        padding: 35px 35px;
+
+    }
+
+    .vendor-register-logo {
+
+        width: 100px;
+
+        height: 100px;
+
+    }
+
+    .vendor-register-card h1 {
+
+        font-size: 28px;
+
+    }
+
+    .vendor-register-card h2 {
+
+        font-size: 24px;
+
+    }
+
+}
+
+
+/* ================================
+   Accessibility
+================================ */
+
+.vendor-register-logo:focus {
+
+    outline: 3px solid var(--shadow-primary-strong);
+
+    outline-offset: 3px;
+
+}

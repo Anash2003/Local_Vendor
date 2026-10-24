@@ -1,0 +1,1337 @@
+/* =========================================
+   BOOKING PAGE
+========================================= */
+
+.booking-page {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--dark);
+    padding: 32px 0 60px;
+}
+
+.booking-container {
+    width: min(1180px, 95%);
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.booking-header {
+    margin-bottom: 32px;
+}
+
+.booking-back {
+    border: 0;
+    color: var(--light-blue);
+    padding: 0;
+    margin-bottom: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--dark);
+}
+
+.booking-back:hover {
+    color: var(--primary);
+}
+
+.booking-eyebrow {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+}
+
+.booking-header h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.booking-header p {
+    margin: 8px 0 0;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   MESSAGES
+========================================= */
+
+.booking-message {
+    padding: 13px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.booking-error {
+    background: var(--error-bg);
+    color: var(--error-text);
+    border: 1px solid var(--error-border);
+}
+
+.booking-success {
+    background: var(--success-bg);
+    color: var(--success-text);
+    border: 1px solid var(--success-border);
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 45px;
+    align-items: start;
+}
+
+.booking-main {
+    min-width: 0;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.booking-section {
+    padding: 30px 0;
+    border-top: 1px solid var(--border-section);
+}
+
+.booking-section:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.section-heading > span {
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--light-blue);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.section-heading p {
+    margin: 3px 0 0;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   SERVICE SELECT
+========================================= */
+
+.booking-select,
+.booking-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    background: var(--cards);
+    color: var(--dark);
+    padding: 13px 14px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.booking-select {
+    cursor: pointer;
+}
+
+.booking-select:focus,
+.booking-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--light-blue);
+}
+
+.booking-textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+
+/* =========================================
+   PROFESSIONAL SECTION HEADER
+========================================= */
+
+.professional-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.professional-heading .section-heading {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   VIEW ALL BUTTON
+========================================= */
+
+.view-all-button {
+    flex: 0 0 auto;
+    border: 1px solid var(--primary);
+    background: var(--cards);
+    color: var(--primary);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.view-all-button:hover {
+    background: var(--primary);
+    color: var(--cards);
+}
+
+
+/* =========================================
+   VENDOR LIST
+========================================= */
+
+.vendor-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+
+/* =========================================
+   VENDOR CARD
+========================================= */
+
+.vendor-card {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    background: var(--vendor-card-bg);
+    border: 1px solid var(--vendor-card-border);
+    border-radius: 18px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.vendor-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.vendor-card-selected {
+    border-color: var(--primary);
+    background: var(--vendor-card-selected-bg);
+}
+
+.vendor-card-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================
+   VENDOR PROFILE
+========================================= */
+
+.vendor-card-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+}
+
+.vendor-image-wrapper {
+    flex: 0 0 auto;
+}
+
+.vendor-image,
+.vendor-image-fallback {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.vendor-image {
+    display: block;
+    object-fit: cover;
+}
+
+.vendor-image-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-blue);
+    color: var(--primary);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   VENDOR INFORMATION
+========================================= */
+
+.vendor-card-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.vendor-card-info h5 {
+    margin: 0 0 7px;
+    color: var(--light-blue);
+    font-size: 1.05rem;
+    font-weight: 800;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.vendor-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    font-size: 0.82rem;
+}
+
+.vendor-rating span {
+    color: var(--primary);
+}
+
+.vendor-rating strong {
+    color: var(--light-blue);
+}
+
+.vendor-rating small {
+    color: var(--text-muted);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.vendor-description {
+    margin-top: 18px;
+    flex: 1;
+    min-height: 105px;
+}
+
+.vendor-about {
+    margin: 0;
+    color: var(--text-dark-gray);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   EXPANDED DESCRIPTION
+========================================= */
+
+.vendor-description-expanded {
+    min-height: 105px;
+}
+
+.vendor-description-expanded .vendor-about {
+    display: block;
+    line-clamp: unset;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
+
+
+/* =========================================
+   READ MORE
+========================================= */
+
+.read-more-button {
+    border: none;
+    background: var(--transparent);
+    padding: 5px 0 0;
+    color: var(--primary);
+    font-size: 0.84rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.read-more-button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   VENDOR BUTTON
+========================================= */
+
+.vendor-card-action {
+    width: 100%;
+    margin-top: 18px;
+}
+
+.vendor-select-button {
+    width: 100%;
+    min-height: 44px;
+    border: 1px solid var(--gray-300);
+    border-radius: 9px;
+    background: var(--cards);
+    color: var(--dark);
+    padding: 10px 14px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.vendor-select-button:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.vendor-select-button.selected {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--cards);
+}
+
+
+/* =========================================
+   EMPTY / LOADING
+========================================= */
+
+.section-empty,
+.section-loading {
+    background: var(--light-blue);
+    border-radius: 10px;
+    padding: 18px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.availability-warning {
+    background: var(--warning-bg);
+    border: 1px solid var(--warning-border);
+    color: var(--warning-text);
+    border-radius: 10px;
+    padding: 13px 15px;
+    margin-bottom: 18px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   APPOINTMENT
+========================================= */
+
+.appointment-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   BOOKING SUMMARY
+========================================= */
+
+.booking-summary {
+    min-width: 0;
+}
+
+.summary-card {
+    position: sticky;
+    top: 25px;
+    background: var(--cards);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.summary-label {
+    color: var(--primary);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.summary-card h2 {
+    margin: 7px 0 22px;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.summary-list {
+    border-top: 1px solid var(--light-gray);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.summary-row span {
+    color: var(--text-muted);
+    font-size: 0.83rem;
+}
+
+.summary-row strong {
+    max-width: 55%;
+    text-align: right;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+}
+
+.booking-confirm {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 22px;
+    border: 0;
+    border-radius: 9px;
+    padding: 13px 15px;
+    background: var(--primary);
+    color: var(--cards);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.booking-confirm:hover:not(:disabled) {
+    background: var(--accent);
+    color: var(--dark);
+}
+
+.booking-confirm:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   VIEW ALL VENDORS MODAL
+========================================= */
+
+.vendor-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    background: var(--modal-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.vendor-modal {
+    width: 100%;
+    max-width: 950px;
+    max-height: calc(100vh - 40px);
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+.vendor-modal-header {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px;
+    background: var(--background);
+    border-bottom: 1px solid var(--border-section);
+    box-sizing: border-box;
+}
+
+.vendor-modal-header > div {
+    min-width: 0;
+}
+
+.vendor-modal-header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.vendor-modal-header p {
+    margin: 7px 0 0;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   MODAL CLOSE
+========================================= */
+
+.modal-close {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--border-light);
+    border-radius: 50%;
+    background: var(--cards);
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+
+/* =========================================
+   MODAL BODY
+========================================= */
+
+.vendor-modal-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   MODAL VENDOR CARD
+========================================= */
+
+.vendor-card-modal {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.vendor-card-modal .vendor-card-top {
+    min-width: 0;
+}
+
+.vendor-card-modal .vendor-card-info {
+    min-width: 0;
+    flex: 1;
+}
+
+
+/* =========================================
+   CUSTOM BOOKING CALENDAR
+========================================= */
+
+.booking-calendar {
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--cards);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+
+/* =========================================
+   CALENDAR HEADER
+========================================= */
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.calendar-header h3 {
+    margin: 0;
+    color: var(--dark);
+    font-size: 1.05rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.calendar-nav-button {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    border: 1px solid var(--border-light);
+    border-radius: 9px;
+    background: var(--cards);
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.calendar-nav-button:hover {
+    background: var(--light-blue);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+
+/* =========================================
+   WEEK DAYS
+========================================= */
+
+.calendar-weekdays,
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 7px;
+}
+
+.calendar-weekdays {
+    margin-bottom: 7px;
+}
+
+.calendar-weekday {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    font-weight: 800;
+    padding: 7px 0;
+}
+
+
+/* =========================================
+   CALENDAR DAY
+========================================= */
+
+.calendar-day {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    min-height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 0.84rem;
+    font-weight: 800;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        border-color 0.15s ease;
+}
+
+button.calendar-day {
+    cursor: pointer;
+}
+
+.calendar-empty {
+    pointer-events: none;
+    background: var(--transparent);
+}
+
+
+/* =========================================
+   AVAILABLE
+========================================= */
+
+.calendar-day.available {
+    background: var(--available-bg);
+    border: 2px solid var(--available-border);
+    color: var(--available-text);
+}
+
+.calendar-day.available:hover {
+    background: var(--available-hover-bg);
+    border-color: var(--available-hover-border);
+    color: var(--available-hover-text);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px var(--shadow-success-hover);
+}
+
+
+/* =========================================
+   SELECTED
+========================================= */
+
+.calendar-day.selected {
+    background: var(--selected-bg);
+    border: 2px solid var(--selected-border);
+    color: var(--selected-text);
+    box-shadow: 0 4px 12px var(--shadow-primary);
+}
+
+
+/* =========================================
+   UNAVAILABLE
+========================================= */
+
+.calendar-day.unavailable {
+    background: var(--unavailable-bg);
+    border: 2px solid var(--unavailable-border);
+    color: var(--unavailable-text);
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   WEEK OFF
+========================================= */
+
+.calendar-day.weekoff {
+    background: var(--weekoff-bg);
+    border: 2px solid var(--weekoff-border);
+    color: var(--weekoff-text);
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   BOOKED
+========================================= */
+
+.calendar-day.booked {
+    background: var(--booked-bg);
+    border: 2px solid var(--booked-border);
+    color: var(--booked-text);
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   PAST DATE
+========================================= */
+
+.calendar-day.past {
+    background: var(--past-bg);
+    border: 2px solid var(--past-border);
+    color: var(--past-text);
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   CALENDAR LEGEND
+========================================= */
+
+.calendar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    margin-top: 20px;
+    padding-top: 17px;
+    border-top: 1px solid var(--light-gray);
+}
+
+.calendar-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--text-dark-gray);
+    font-size: 0.76rem;
+    font-weight: 650;
+}
+
+.legend-dot {
+    width: 11px;
+    height: 11px;
+    flex: 0 0 11px;
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   LEGEND COLORS
+========================================= */
+
+.legend-available {
+    background: var(--available-legend);
+}
+
+.legend-selected {
+    background: var(--primary);
+}
+
+.legend-unavailable {
+    background: var(--unavailable-legend);
+}
+
+.legend-weekoff {
+    background: var(--weekoff-legend);
+}
+
+.legend-booked {
+    background: var(--booked-legend);
+}
+
+.legend-past {
+    background: var(--past-legend);
+}
+
+
+/* =========================================
+   SELECTED DATE
+========================================= */
+
+.selected-date-display {
+    margin-top: 10px;
+    padding: 11px 13px;
+    border-radius: 9px;
+    background: var(--light-blue);
+    border: 1px solid var(--vendor-card-border);
+    color: var(--dark);
+    font-size: 0.83rem;
+}
+
+.selected-date-display strong {
+    color: var(--primary);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+    .booking-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .booking-summary {
+        order: -1;
+    }
+
+    .summary-card {
+        position: static;
+    }
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 768px) {
+    .vendor-modal-backdrop {
+        padding: 12px;
+    }
+
+    .vendor-modal {
+        max-height: calc(100vh - 24px);
+        border-radius: 14px;
+    }
+
+    .vendor-modal-header {
+        padding: 20px;
+    }
+
+    .vendor-modal-body {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 14px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+    .booking-page {
+        padding-top: 22px;
+    }
+
+    .booking-container {
+        width: 92%;
+    }
+
+    .vendor-list {
+        grid-template-columns: 1fr;
+    }
+
+    .professional-heading {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .view-all-button {
+        align-self: flex-start;
+        margin-top: -5px;
+        margin-bottom: 20px;
+    }
+
+    .vendor-modal-backdrop {
+        padding: 8px;
+    }
+
+    .vendor-modal {
+        max-height: calc(100vh - 16px);
+        border-radius: 12px;
+    }
+
+    .vendor-modal-header {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .vendor-modal-header h2 {
+        font-size: 1.15rem;
+    }
+
+    .vendor-modal-header p {
+        font-size: 0.82rem;
+    }
+
+    .vendor-modal-body {
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .modal-close {
+        flex: 0 0 34px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .booking-calendar {
+        padding: 14px;
+    }
+
+    .calendar-weekdays,
+    .calendar-grid {
+        gap: 5px;
+    }
+
+    .calendar-day {
+        min-height: 40px;
+        border-radius: 8px;
+        font-size: 0.76rem;
+    }
+
+    .calendar-weekday {
+        font-size: 0.68rem;
+    }
+
+    .calendar-nav-button {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+    }
+
+    .calendar-header h3 {
+        font-size: 0.95rem;
+    }
+
+    .calendar-legend {
+        gap: 10px 14px;
+    }
+
+    .calendar-legend-item {
+        font-size: 0.7rem;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+    .booking-page {
+        padding-bottom: 40px;
+    }
+
+    .booking-header h1 {
+        font-size: 1.65rem;
+    }
+
+    .booking-section {
+        padding: 24px 0;
+    }
+
+    .section-heading {
+        gap: 10px;
+    }
+
+    .section-heading > span {
+        flex-basis: 30px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.05rem;
+    }
+
+    .vendor-card {
+        padding: 14px;
+    }
+
+    .vendor-image,
+    .vendor-image-fallback {
+        width: 52px;
+        height: 52px;
+    }
+
+    .summary-card {
+        padding: 18px;
+    }
+
+    .booking-calendar {
+        padding: 11px;
+    }
+
+    .calendar-weekdays,
+    .calendar-grid {
+        gap: 4px;
+    }
+
+    .calendar-day {
+        min-height: 34px;
+        border-radius: 7px;
+        font-size: 0.7rem;
+    }
+
+    .calendar-weekday {
+        font-size: 0.62rem;
+    }
+
+    .calendar-legend {
+        gap: 8px 10px;
+    }
+}
+
+
+/* =========================================================
+   BOOKING SUCCESS MODAL
+========================================================= */
+
+.booking-success-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--modal-overlay);
+}
+
+.booking-success-modal {
+    width: 100%;
+    max-width: 450px;
+    background: var(--cards);
+    border-radius: 20px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 20px 60px var(--backdrop-dark-strong);
+    animation: bookingSuccessPopup 0.25s ease-out;
+}
+
+@keyframes bookingSuccessPopup {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.booking-success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--light-blue);
+    color: var(--primary);
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.booking-success-modal h2 {
+    margin-bottom: 12px;
+    color: var(--dark);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.booking-success-text {
+    margin: 0 auto 18px;
+    max-width: 350px;
+    color: var(--dark);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.booking-success-countdown {
+    margin-bottom: 25px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.booking-success-countdown strong {
+    color: var(--primary);
+    font-size: 17px;
+}
+
+.booking-success-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.booking-keep-button,
+.booking-done-button {
+    min-height: 46px;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.booking-keep-button {
+    background: var(--cards);
+    color: var(--dark);
+    border: 1px solid var(--gray-300);
+}
+
+.booking-keep-button:hover {
+    background: var(--light-blue);
+}
+
+.booking-done-button {
+    background: var(--primary);
+    color: var(--cards);
+    border: 1px solid var(--primary);
+}
+
+.booking-done-button:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+@media (max-width: 576px) {
+    .booking-success-modal {
+        padding: 30px 20px;
+    }
+
+    .booking-success-modal h2 {
+        font-size: 24px;
+    }
+
+    .booking-success-actions {
+        flex-direction: column;
+    }
+
+    .booking-keep-button,
+    .booking-done-button {
+        width: 100%;
+    }
+}

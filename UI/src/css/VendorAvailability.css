@@ -1,0 +1,1729 @@
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.vendor-availability-page {
+    min-height: 100vh;
+    background: var(--background);
+    padding: 35px 7%;
+    color: var(--dark);
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.availability-back-btn {
+    border: none;
+    background: var(--transparent);
+    color: var(--dark);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+    padding: 6px 0;
+    transition: 0.2s ease;
+}
+
+.availability-back-btn:hover {
+    color: var(--primary);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.availability-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.availability-header h1 {
+    color: var(--dark);
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+
+.availability-header h1 i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.availability-header p {
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.vendor-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--light-blue);
+    color: var(--dark);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.vendor-name i {
+    color: var(--primary);
+}
+
+
+/* =========================================
+   COMMON CARD
+========================================= */
+
+.availability-card {
+    background: var(--cards);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 25px var(--shadow-light);
+}
+
+
+/* =========================================
+   GENERAL ERROR
+========================================= */
+
+.availability-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 17px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background: var(--danger-bg);
+    border: 1px solid var(--danger-border-light);
+    color: var(--danger-deep);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   GENERAL SUCCESS
+========================================= */
+
+.availability-success {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding: 15px 18px;
+    background: var(--success-bg);
+    border: 1px solid var(--success-hover-bg);
+    border-radius: 12px;
+    color: var(--success-deep);
+}
+
+.success-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--success-light-bg);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.availability-success strong {
+    color: var(--success-deep);
+}
+
+.availability-success p {
+    margin: 3px 0 0;
+    font-size: 14px;
+}
+
+.availability-success button {
+    margin-left: auto;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: var(--transparent);
+    color: var(--success-deep);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.availability-success button:hover {
+    background: var(--success-light-bg);
+}
+
+
+/* =========================================
+   OVERALL AVAILABILITY
+========================================= */
+
+.availability-status-card {
+    padding: 25px;
+}
+
+.availability-status-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.availability-status-content h3 {
+    color: var(--dark);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+
+.availability-status-content p {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.availability-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.availability-status span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.availability-status.active {
+    background: var(--customer-success-bg);
+    color: var(--success-dark);
+}
+
+.availability-status.active span {
+    background: var(--success-bright);
+}
+
+.availability-status.stopped {
+    background: var(--danger-bg);
+    color: var(--danger);
+}
+
+.availability-status.stopped span {
+    background: var(--danger-bright);
+}
+
+
+/* =========================================
+   AVAILABILITY BUTTONS
+========================================= */
+
+.availability-control {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.stop-working-btn,
+.start-working-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 11px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.2s ease;
+    white-space: nowrap;
+}
+
+.stop-working-btn {
+    background: var(--danger-light-bg);
+    color: var(--danger);
+}
+
+.stop-working-btn:hover {
+    background: var(--danger-border-light);
+    transform: translateY(-1px);
+}
+
+.start-working-btn {
+    background: var(--success-light-bg);
+    color: var(--success-dark);
+}
+
+.start-working-btn:hover {
+    background: var(--success-hover-bg);
+    transform: translateY(-1px);
+}
+
+.stop-working-btn:disabled,
+.start-working-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================
+   STOPPED MESSAGE
+========================================= */
+
+.availability-stopped-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 17px 19px;
+    margin-bottom: 22px;
+    background: var(--light-blue);
+    border: 1px solid var(--orange-border);
+    border-radius: 14px;
+    color: var(--orange-dark);
+}
+
+.availability-stopped-message > i {
+    font-size: 20px;
+    margin-top: 2px;
+    color: var(--orange-bright);
+}
+
+.availability-stopped-message strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.availability-stopped-message p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   SELECTION MODE
+========================================= */
+
+.availability-mode-card {
+    background: var(--cards);
+}
+
+.availability-mode-card h3 {
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.availability-mode-card h3 i {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+.availability-mode-card > p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0 0 18px;
+}
+
+.mode-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.mode-btn {
+    border: 1px solid var(--gray-200);
+    background: var(--cards);
+    color: var(--text-muted);
+    border-radius: 9px;
+    padding: 10px 15px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.mode-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.mode-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--cards);
+}
+
+.mode-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   CALENDAR
+========================================= */
+
+.calendar-card {
+    position: relative;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.calendar-header h2 {
+    min-width: 180px;
+    text-align: center;
+    color: var(--dark);
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.calendar-nav-btn {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    background: var(--light-blue);
+    color: var(--dark);
+    cursor: pointer;
+    transition: 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-nav-btn:hover {
+    background: var(--primary);
+    color: var(--cards);
+}
+
+.today-btn {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    border: 1px solid var(--gray-200);
+    background: var(--cards);
+    color: var(--dark);
+    border-radius: 9px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.today-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+
+/* =========================================
+   WEEK DAYS
+========================================= */
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+    margin-bottom: 8px;
+}
+
+.calendar-weekdays div {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 0;
+}
+
+
+/* =========================================
+   CALENDAR GRID
+========================================= */
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1fr;
+}
+
+.calendar-day {
+    min-height: 75px;
+    border-radius: 12px;
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+    border: 1px solid transparent;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.calendar-day:not(.past-day):not(.booked-day):not(.stopped-day):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px var(--shadow-color);
+}
+
+
+/* =========================================
+   EMPTY DAY
+========================================= */
+
+.empty-day {
+    background: var(--transparent);
+    border-color: var(--transparent);
+    cursor: default;
+}
+
+
+/* =========================================
+   AVAILABLE
+========================================= */
+
+.available-day {
+    background: var(--customer-success-bg);
+    color: var(--success-dark);
+    border-color: var(--success-hover-bg);
+}
+
+
+/* =========================================
+   BOOKED
+========================================= */
+
+.booked-day {
+    background: var(--light-blue);
+    color: var(--orange-medium);
+    border-color: var(--orange-border);
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   UNAVAILABLE
+========================================= */
+
+.unavailable-day {
+    background: var(--danger-bg);
+    color: var(--danger);
+    border-color: var(--danger-border-light);
+}
+
+
+/* =========================================
+   WEEK OFF
+========================================= */
+
+.weekoff-day {
+    background: var(--purple-soft-bg);
+    color: var(--purple-soft-text);
+    border-color: var(--purple-soft-border);
+}
+
+
+/* =========================================
+   PAST
+========================================= */
+
+.past-day {
+    background: var(--gray-50);
+    color: var(--gray-300);
+    cursor: not-allowed;
+    border-color: var(--gray-100);
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   STOPPED
+========================================= */
+
+.stopped-day {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+    pointer-events: none;
+}
+
+
+/* =========================================
+   TODAY
+========================================= */
+
+.today-day {
+    border: 2px solid var(--primary);
+}
+
+
+/* =========================================
+   SELECTED DATE
+========================================= */
+
+.calendar-day.selected-day {
+    box-shadow: inset 0 0 0 3px var(--primary);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   CALENDAR LEGEND
+========================================= */
+
+.calendar-legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-100);
+}
+
+.calendar-legend > div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.legend-color {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.legend-color.available {
+    background: var(--success-bright);
+}
+
+.legend-color.booked {
+    background: var(--orange-bright);
+}
+
+.legend-color.unavailable {
+    background: var(--danger-bright);
+}
+
+.legend-color.weekoff {
+    background: var(--calendar-weekoff-legend);
+}
+
+
+/* =========================================
+   SELECTED DATE CARD
+========================================= */
+
+.selected-date-card {
+    background: var(--cards);
+}
+
+.selected-date-card h3 {
+    margin: 0 0 7px;
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.selected-date-card h3 i {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+.selected-date-card > p {
+    margin: 0 0 15px;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   REASON INPUT
+========================================= */
+
+.selected-date-card > input {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--gray-200);
+    border-radius: 9px;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+    color: var(--dark);
+    margin-bottom: 15px;
+    transition: 0.2s ease;
+}
+
+.selected-date-card > input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--backdrop-orange-light);
+}
+
+.selected-date-card > input:disabled {
+    background: var(--gray-50);
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   SELECTED DATE BUTTONS
+========================================= */
+
+.selected-date-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.mark-unavailable-btn,
+.make-available-btn,
+.cancel-selection-btn {
+    border-radius: 9px;
+    padding: 10px 15px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    transition: 0.2s ease;
+}
+
+
+/* MARK UNAVAILABLE */
+
+.mark-unavailable-btn {
+    border: none;
+    background: var(--danger-light-bg);
+    color: var(--danger);
+}
+
+.mark-unavailable-btn:hover {
+    background: var(--danger-border-light);
+}
+
+
+/* MAKE AVAILABLE */
+
+.make-available-btn {
+    border: none;
+    background: var(--success-light-bg);
+    color: var(--success-dark);
+}
+
+.make-available-btn:hover {
+    background: var(--success-hover-bg);
+}
+
+
+/* CANCEL */
+
+.cancel-selection-btn {
+    border: 1px solid var(--gray-200);
+    background: var(--cards);
+    color: var(--text-muted);
+}
+
+.cancel-selection-btn:hover {
+    border-color: var(--text-light);
+    color: var(--dark);
+    background: var(--gray-50);
+}
+
+
+/* DISABLED */
+
+.mark-unavailable-btn:disabled,
+.make-available-btn:disabled,
+.cancel-selection-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   INLINE MESSAGES
+========================================= */
+
+.availability-inline-success,
+.availability-inline-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.availability-inline-success {
+    background: var(--success-bg);
+    border: 1px solid var(--success-hover-bg);
+    color: var(--success-deep);
+}
+
+.availability-inline-error {
+    background: var(--danger-bg);
+    border: 1px solid var(--danger-border-light);
+    color: var(--danger-deep);
+}
+
+.availability-inline-success > i {
+    color: var(--success);
+    font-size: 17px;
+}
+
+.availability-inline-error > i {
+    color: var(--danger);
+    font-size: 17px;
+}
+
+.availability-inline-success span,
+.availability-inline-error span {
+    flex: 1;
+}
+
+.availability-inline-success button,
+.availability-inline-error button {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: var(--transparent);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.availability-inline-success button {
+    color: var(--success-deep);
+}
+
+.availability-inline-error button {
+    color: var(--danger-deep);
+}
+
+.availability-inline-success button:hover {
+    background: var(--success-light-bg);
+}
+
+.availability-inline-error button:hover {
+    background: var(--danger-light-bg);
+}
+
+
+/* =========================================
+   WEEKLY OFF
+========================================= */
+
+.weekly-off-card h3 {
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.weekly-off-card h3 i {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+.weekly-off-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+.weekly-off-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.current-weekoff {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border-radius: 10px;
+    background: var(--purple-soft-bg);
+    color: var(--purple-soft-text);
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.current-weekoff i {
+    font-size: 14px;
+}
+
+.weekly-off-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.weekly-off-control select {
+    min-width: 190px;
+    border: 1px solid var(--gray-200);
+    border-radius: 9px;
+    padding: 10px 12px;
+    background: var(--cards);
+    color: var(--dark);
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.weekly-off-control select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--backdrop-orange-light);
+}
+
+.weekly-off-control select:disabled {
+    background: var(--gray-50);
+    cursor: not-allowed;
+}
+
+.weekly-off-btn {
+    border: none;
+    border-radius: 9px;
+    padding: 10px 16px;
+    background: var(--primary);
+    color: var(--cards);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    transition: 0.2s ease;
+}
+
+.weekly-off-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.weekly-off-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================
+   BOOKINGS
+========================================= */
+
+.bookings-card h3 {
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.bookings-card h3 i {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+.booking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.availability-booking {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 17px;
+    border: 1px solid var(--gray-100);
+    border-radius: 13px;
+    transition: 0.2s ease;
+}
+
+.availability-booking:hover {
+    border-color: var(--gray-200);
+    background: var(--soft-background-3);
+}
+
+.availability-booking > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.availability-booking strong {
+    color: var(--dark);
+    font-size: 14px;
+}
+
+.availability-booking span {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.availability-booking small {
+    color: var(--orange-medium);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+
+/* =========================================
+   EMPTY BOOKINGS
+========================================= */
+
+.empty-bookings {
+    text-align: center;
+    padding: 40px 20px 25px;
+    color: var(--text-light);
+}
+
+.empty-bookings i {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.empty-bookings p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   START / STOP POPUP OVERLAY
+========================================= */
+
+.availability-popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: var(--modal-overlay);
+    backdrop-filter: blur(4px);
+
+    animation: availabilityOverlayShow 0.2s ease;
+}
+
+
+/* =========================================
+   POPUP BOX
+========================================= */
+
+.availability-confirm-box {
+    position: relative;
+    width: min(520px, 100%);
+
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    padding: 28px;
+
+    background: var(--cards);
+    border: 1px solid var(--availability-modal-border);
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 60px var(--backdrop-dark-strong),
+        0 8px 20px var(--shadow-color);
+
+    animation: availabilityPopupShow 0.25s ease;
+}
+
+
+/* =========================================
+   POPUP ICON
+========================================= */
+
+.confirm-box-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+    background: var(--light-blue);
+    color: var(--primary);
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   POPUP CONTENT
+========================================= */
+
+.confirm-box-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.confirm-box-content h3 {
+    margin: 0 0 8px;
+    color: var(--dark);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.confirm-box-content p {
+    margin: 0 0 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   POPUP BUTTONS
+========================================= */
+
+.confirm-box-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.confirm-cancel-btn,
+.confirm-stop-btn,
+.confirm-start-btn {
+    min-height: 42px;
+    padding: 10px 17px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    transition: 0.2s ease;
+}
+
+
+/* CANCEL */
+
+.confirm-cancel-btn {
+    border: 1px solid var(--gray-300);
+    background: var(--cards);
+    color: var(--text-dark-gray);
+}
+
+.confirm-cancel-btn:hover {
+    background: var(--gray-50);
+}
+
+
+/* STOP */
+
+.confirm-stop-btn {
+    border: none;
+    background: var(--danger);
+    color: var(--cards);
+}
+
+.confirm-stop-btn:hover {
+    background: var(--danger-dark);
+    transform: translateY(-1px);
+}
+
+
+/* START */
+
+.confirm-start-btn {
+    border: none;
+    background: var(--success);
+    color: var(--cards);
+}
+
+.confirm-start-btn:hover {
+    background: var(--success-dark);
+    transform: translateY(-1px);
+}
+
+
+/* DISABLED */
+
+.confirm-cancel-btn:disabled,
+.confirm-stop-btn:disabled,
+.confirm-start-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================
+   POPUP ANIMATION
+========================================= */
+
+@keyframes availabilityOverlayShow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes availabilityPopupShow {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.availability-loading {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+}
+
+.availability-loading i {
+    font-size: 30px;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.availability-loading p {
+    margin: 0;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .vendor-availability-page {
+        padding: 25px 4%;
+    }
+
+    .availability-header {
+        align-items: flex-start;
+    }
+
+    .availability-header h1 {
+        font-size: 25px;
+    }
+
+    .availability-status-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .availability-control {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .availability-control button {
+        width: auto;
+    }
+
+    .weekly-off-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .weekly-off-control {
+        width: 100%;
+    }
+
+    .weekly-off-control select {
+        flex: 1;
+    }
+
+    .calendar-header {
+        padding-bottom: 45px;
+    }
+
+    .today-btn {
+        right: 50%;
+        top: auto;
+        bottom: 0;
+        transform: translateX(50%);
+    }
+
+    .calendar-day {
+        min-height: 60px;
+        padding: 5px;
+    }
+
+    .calendar-legend {
+        gap: 12px;
+    }
+
+    .selected-date-buttons {
+        width: 100%;
+    }
+
+    .availability-booking {
+        align-items: flex-start;
+    }
+
+    .availability-confirm-box {
+        padding: 23px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .vendor-availability-page {
+        padding: 20px 3.5%;
+    }
+
+    .availability-card {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .availability-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .availability-header h1 {
+        font-size: 23px;
+    }
+
+    .vendor-name {
+        align-self: flex-start;
+    }
+
+    .stop-working-btn,
+    .start-working-btn {
+        width: 100%;
+    }
+
+    .availability-control {
+        width: 100%;
+    }
+
+    .mode-buttons {
+        width: 100%;
+    }
+
+    .mode-btn {
+        flex: 1;
+        padding: 10px 8px;
+    }
+
+    .calendar-header {
+        margin-bottom: 22px;
+    }
+
+    .calendar-header h2 {
+        min-width: 145px;
+        font-size: 18px;
+    }
+
+    .calendar-grid {
+        gap: 4px;
+    }
+
+    .calendar-weekdays {
+        gap: 4px;
+    }
+
+    .calendar-day {
+        min-height: 52px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    .calendar-legend {
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .calendar-legend > div {
+        font-size: 12px;
+    }
+
+    .selected-date-card > input {
+        max-width: none;
+    }
+
+    .selected-date-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .selected-date-buttons button {
+        width: 100%;
+    }
+
+    .weekly-off-control {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .weekly-off-control select,
+    .weekly-off-btn {
+        width: 100%;
+    }
+
+    .availability-booking {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .availability-popup-overlay {
+        padding: 15px;
+    }
+
+    .availability-confirm-box {
+        padding: 21px 18px;
+        gap: 13px;
+        border-radius: 17px;
+    }
+
+    .confirm-box-icon {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        border-radius: 12px;
+        font-size: 17px;
+    }
+
+    .confirm-box-content h3 {
+        font-size: 17px;
+    }
+
+    .confirm-box-content p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .confirm-box-buttons {
+        justify-content: stretch;
+    }
+
+    .confirm-cancel-btn,
+    .confirm-stop-btn,
+    .confirm-start-btn {
+        flex: 1;
+    }
+}
+
+
+/* =========================================
+   DASHBOARD ACCESS POPUP OVERLAY
+========================================= */
+
+.vendor-access-popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: var(--modal-overlay);
+    backdrop-filter: blur(4px);
+
+    animation: vendorAccessOverlayShow 0.2s ease;
+}
+
+
+/* =========================================
+   DASHBOARD ACCESS POPUP BOX
+========================================= */
+
+.vendor-access-popup-box {
+    position: relative;
+
+    width: min(520px, 100%);
+
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    padding: 28px;
+
+    background: var(--cards);
+
+    border: 1px solid var(--availability-modal-border);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 60px var(--backdrop-dark-strong),
+        0 8px 20px var(--shadow-color);
+
+    animation: vendorAccessPopupShow 0.25s ease;
+}
+
+
+/* =========================================
+   POPUP ICON
+========================================= */
+
+.vendor-access-popup-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: var(--light-blue);
+    color: var(--primary);
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   POPUP CONTENT
+========================================= */
+
+.vendor-access-popup-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.vendor-access-popup-content h3 {
+    margin: 0 0 8px;
+
+    color: var(--dark);
+
+    font-size: 20px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.vendor-access-popup-content p {
+    margin: 0 0 20px;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   POPUP BUTTONS
+========================================= */
+
+.vendor-access-popup-buttons {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.vendor-access-close-btn {
+    min-height: 42px;
+
+    padding: 10px 17px;
+
+    border: 1px solid var(--gray-300);
+    border-radius: 9px;
+
+    background: var(--cards);
+    color: var(--text-dark-gray);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    transition: 0.2s ease;
+}
+
+.vendor-access-close-btn:hover {
+    background: var(--gray-50);
+}
+
+
+/* =========================================
+   POPUP ANIMATION
+========================================= */
+
+@keyframes vendorAccessOverlayShow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes vendorAccessPopupShow {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .vendor-access-popup-box {
+        padding: 23px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .vendor-access-popup-overlay {
+        padding: 15px;
+    }
+
+    .vendor-access-popup-box {
+        padding: 21px 18px;
+        gap: 13px;
+        border-radius: 17px;
+    }
+
+    .vendor-access-popup-icon {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+
+        border-radius: 12px;
+
+        font-size: 17px;
+    }
+
+    .vendor-access-popup-content h3 {
+        font-size: 17px;
+    }
+
+    .vendor-access-popup-content p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .vendor-access-popup-buttons {
+        justify-content: stretch;
+    }
+
+    .vendor-access-close-btn {
+        flex: 1;
+    }
+}

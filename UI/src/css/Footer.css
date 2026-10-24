@@ -1,0 +1,223 @@
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer-link-button {
+
+    padding: 0;
+
+    color: var(--cards);
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 0.9rem;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+
+}
+
+.footer-link-button:hover {
+
+    color: var(--primary);
+
+}
+
+
+
+.footer-bottom-link {
+
+    padding: 0;
+
+    color: var(--cards);
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 0.85rem;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+
+}
+
+.footer-bottom-link:hover {
+
+    color: var(--primary);
+
+}
+
+
+
+/* =========================================
+   LOGOUT MODAL
+========================================= */
+
+.footer-logout-modal {
+
+    border: 1px solid var(--border) !important;
+
+    border-radius: 16px !important;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px var(--shadow-medium);
+
+}
+
+.footer-logout-modal .modal-header {
+
+    padding: 20px 22px;
+
+    border-bottom: 1px solid var(--border) !important;
+
+}
+
+.footer-modal-label {
+
+    margin: 0 0 4px;
+
+    color: var(--primary);
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+.footer-logout-modal .modal-title {
+
+    color: var(--dark);
+
+    font-weight: 700;
+
+}
+
+.footer-logout-modal .modal-body {
+
+    padding: 25px 22px;
+
+    color: var(--text);
+
+}
+
+.footer-modal-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--primary);
+
+    background-color: var(--light-blue);
+
+    border-radius: 50%;
+
+    font-size: 1.25rem;
+
+}
+
+.footer-logout-modal .modal-body p {
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+
+}
+
+.footer-logout-modal .modal-footer {
+
+    padding: 16px 22px;
+
+    border-top: 1px solid var(--border) !important;
+
+}
+
+.footer-modal-stay-button {
+
+    color: var(--text) !important;
+
+    background-color: var(--neutral-light) !important;
+
+    border: 1px solid var(--border-section) !important;
+
+    border-radius: 8px !important;
+
+    font-weight: 600;
+
+}
+
+.footer-modal-stay-button:hover {
+
+    color: var(--dark) !important;
+
+    background-color: var(--cards) !important;
+
+    border-color: var(--border) !important;
+
+}
+
+.footer-modal-logout-button {
+
+    color: var(--dark) !important;
+
+    background-color: var(--primary) !important;
+
+    border: 1px solid var(--primary) !important;
+
+    border-radius: 8px !important;
+
+    font-weight: 700;
+
+}
+
+.footer-modal-logout-button:hover {
+
+    color: var(--dark) !important;
+
+    background-color: var(--primary-accent) !important;
+
+    border-color: var(--primary-accent) !important;
+
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .footer-logout-modal .modal-footer {
+
+        flex-direction: column-reverse;
+
+        gap: 8px;
+
+    }
+
+    .footer-modal-stay-button,
+
+    .footer-modal-logout-button {
+
+        width: 100%;
+
+    }
+
+}

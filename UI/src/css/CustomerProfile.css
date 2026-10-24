@@ -1,0 +1,1088 @@
+/* =========================================================
+   CUSTOMER PROFILE PAGE
+========================================================= */
+
+.customer-profile-page {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--dark);
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.customer-profile-navbar {
+    min-height: 72px;
+    padding: 12px 5%;
+
+    background: var(--cards);
+
+    border-bottom: 1px solid var(--neutral-light);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.customer-profile-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+    user-select: none;
+
+    outline: none;
+}
+
+.customer-profile-brand:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 5px;
+    border-radius: 6px;
+}
+
+.customer-profile-logo {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVIGATION BUTTONS
+========================================================= */
+
+.customer-profile-nav-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.customer-profile-nav-actions button {
+    min-height: 42px;
+
+    padding: 8px 16px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.customer-profile-container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 45px 0 70px;
+}
+
+
+/* =========================================================
+   PAGE HEADING
+========================================================= */
+
+.customer-profile-heading {
+    margin-bottom: 28px;
+}
+
+.customer-profile-label {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.customer-profile-heading h1 {
+    margin: 0;
+
+    color: var(--dark);
+
+    font-size: 34px;
+    font-weight: 750;
+
+    line-height: 1.2;
+}
+
+.customer-profile-heading p {
+    margin: 8px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ALERT / MESSAGE
+========================================================= */
+
+.customer-profile-alert {
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================================
+   PROFILE CARD
+========================================================= */
+
+.customer-profile-card {
+    background: var(--cards);
+
+    border: 1px solid var(--profile-border);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   PROFILE HEADER
+========================================================= */
+
+.customer-profile-header {
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    background: linear-gradient(
+        135deg,
+        var(--light-blue),
+        var(--cards)
+    );
+
+    border-bottom: 1px solid var(--neutral-light);
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
+
+.customer-profile-image-wrapper {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 105px;
+    height: 105px;
+}
+
+.customer-profile-image-wrapper label {
+    position: relative;
+
+    display: block;
+
+    width: 105px;
+    height: 105px;
+
+    margin: 0;
+}
+
+.customer-profile-image,
+.customer-profile-image-placeholder {
+    width: 105px;
+    height: 105px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 4px solid var(--cards);
+
+    box-shadow:
+        0 4px 15px var(--shadow-medium);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   IMAGE PLACEHOLDER
+========================================================= */
+
+.customer-profile-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--gray-100);
+
+    color: var(--text-light);
+
+    font-size: 40px;
+}
+
+
+/* =========================================================
+   IMAGE EDIT MODE
+========================================================= */
+
+.customer-profile-image-editable {
+    cursor: pointer;
+}
+
+.customer-profile-image-editable:focus {
+    outline: none;
+}
+
+.customer-profile-image-editable:focus-visible {
+    outline: 3px solid var(--shadow-primary-focus);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.customer-profile-image-overlay {
+    position: absolute;
+
+    inset: 4px;
+
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    background: var(--modal-overlay-strong);
+
+    color: var(--cards);
+
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+
+    text-align: center;
+}
+
+.customer-profile-image-editable:hover
+.customer-profile-image-overlay {
+    opacity: 1;
+}
+
+.customer-profile-image-overlay i {
+    font-size: 21px;
+}
+
+.customer-profile-image-overlay span {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PROFILE HEADER INFORMATION
+========================================================= */
+
+.customer-profile-header-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.customer-account-badge {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 8px;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: var(--orange-lighter);
+
+    color: var(--orange-deep);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.customer-profile-header-info h2 {
+    margin: 0;
+
+    color: var(--dark);
+
+    font-size: 25px;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    word-break: break-word;
+}
+
+.customer-profile-header-info p {
+    margin: 4px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   EDIT PROFILE BUTTON
+========================================================= */
+
+.customer-edit-button {
+    min-width: 130px;
+    min-height: 44px;
+
+    padding: 8px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PROFILE BODY
+========================================================= */
+
+.customer-profile-body {
+    padding: 32px;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.customer-profile-section-title {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.customer-profile-section-title > i {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: var(--light-blue);
+
+    color: var(--primary);
+
+    font-size: 17px;
+}
+
+.customer-profile-section-title h3 {
+    margin: 0;
+
+    color: var(--dark);
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.customer-profile-section-title p {
+    margin: 3px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FORM LABEL
+========================================================= */
+
+.customer-profile-body .form-label {
+    margin-bottom: 7px;
+
+    color: var(--text);
+
+    font-size: 13px;
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.customer-input-wrapper {
+    position: relative;
+}
+
+.customer-input-wrapper > i {
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.customer-input-wrapper .form-control {
+    min-height: 48px;
+
+    padding: 10px 14px 10px 42px;
+
+    border: 1px solid var(--gray-200);
+
+    border-radius: 9px;
+
+    background: var(--cards);
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.customer-input-wrapper .form-control::placeholder {
+    color: var(--text-light);
+}
+
+.customer-input-wrapper .form-control:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px var(--shadow-primary-soft);
+}
+
+.customer-input-wrapper .form-control:disabled {
+    background: var(--gray-50);
+
+    color: var(--text-dark-gray);
+
+    border-color: var(--gray-200);
+
+    opacity: 1;
+
+    cursor: default;
+}
+
+
+/* =========================================================
+   EDIT MODE ACTIONS
+========================================================= */
+
+.customer-profile-edit-actions {
+    margin-top: 30px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid var(--neutral-light);
+
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.customer-profile-edit-actions button {
+    min-width: 120px;
+    min-height: 44px;
+
+    padding: 8px 18px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACCOUNT INFORMATION
+========================================================= */
+
+.customer-account-info {
+    padding: 24px 32px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    background: var(--profile-account-bg);
+
+    border-top: 1px solid var(--neutral-light);
+}
+
+.customer-info-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+}
+
+.customer-info-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: var(--cards);
+
+    color: var(--primary);
+
+    border: 1px solid var(--profile-border);
+}
+
+.customer-info-item strong,
+.customer-info-item span {
+    display: block;
+
+    word-break: break-word;
+}
+
+.customer-info-item strong {
+    margin-bottom: 2px;
+
+    color: var(--text);
+
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.customer-info-item span {
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.customer-profile-loading {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.customer-profile-loading .spinner-border {
+    width: 35px;
+    height: 35px;
+}
+
+.customer-profile-loading p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   LOGOUT MODAL OVERLAY
+========================================================= */
+
+.customer-profile-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--modal-overlay);
+
+    backdrop-filter: blur(2px);
+}
+
+
+/* =========================================================
+   LOGOUT MODAL
+========================================================= */
+
+.customer-profile-logout-modal {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 30px;
+
+    background: var(--cards);
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px var(--profile-modal-shadow);
+
+    animation: customerLogoutModalIn 0.2s ease;
+}
+
+@keyframes customerLogoutModalIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   LOGOUT ICON
+========================================================= */
+
+.customer-logout-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--light-blue);
+
+    color: var(--primary);
+
+    font-size: 24px;
+}
+
+
+/* =========================================================
+   LOGOUT TITLE
+========================================================= */
+
+.customer-profile-logout-modal h3 {
+    margin: 0 0 8px;
+
+    color: var(--dark);
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.customer-profile-logout-modal p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   LOGOUT BUTTONS
+========================================================= */
+
+.customer-logout-actions {
+    margin-top: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.customer-logout-actions button {
+    min-width: 135px;
+    min-height: 44px;
+
+    padding: 8px 16px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .customer-profile-navbar {
+        padding: 12px 4%;
+    }
+
+    .customer-profile-nav-actions button:first-child {
+        display: none;
+    }
+
+    .customer-profile-container {
+        width: 92%;
+
+        padding-top: 30px;
+    }
+
+    .customer-profile-heading h1 {
+        font-size: 28px;
+    }
+
+    .customer-profile-header {
+        padding: 24px;
+
+        flex-wrap: wrap;
+    }
+
+    .customer-profile-header-info {
+        flex: 1 1 calc(100% - 125px);
+    }
+
+    .customer-edit-button {
+        width: 100%;
+    }
+
+    .customer-profile-body {
+        padding: 24px;
+    }
+
+    .customer-account-info {
+        grid-template-columns: 1fr;
+
+        padding: 22px 24px;
+    }
+
+    .customer-profile-image-overlay {
+        opacity: 1;
+
+        background: var(--backdrop-dark-extra);
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .customer-profile-navbar {
+        min-height: 64px;
+
+        padding: 10px 4%;
+    }
+
+    .customer-profile-brand {
+        gap: 7px;
+    }
+
+    .customer-profile-brand span {
+        font-size: 19px !important;
+    }
+
+    .customer-profile-logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .customer-profile-nav-actions .btn-warning {
+        min-width: 42px;
+
+        width: 42px;
+        height: 42px;
+
+        padding: 0;
+
+        font-size: 0;
+    }
+
+    .customer-profile-nav-actions .btn-warning i {
+        margin: 0 !important;
+
+        font-size: 15px;
+    }
+
+    .customer-profile-container {
+        width: 94%;
+
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }
+
+    .customer-profile-heading {
+        margin-bottom: 22px;
+    }
+
+    .customer-profile-heading h1 {
+        font-size: 25px;
+    }
+
+    .customer-profile-heading p {
+        font-size: 14px;
+    }
+
+    .customer-profile-header {
+        padding: 22px 18px;
+
+        text-align: center;
+
+        justify-content: center;
+    }
+
+    .customer-profile-image-wrapper,
+    .customer-profile-image-wrapper label,
+    .customer-profile-image,
+    .customer-profile-image-placeholder {
+        width: 90px;
+        height: 90px;
+    }
+
+    .customer-profile-image-overlay {
+        inset: 3px;
+    }
+
+    .customer-profile-image-overlay i {
+        font-size: 18px;
+    }
+
+    .customer-profile-image-overlay span {
+        font-size: 9px;
+    }
+
+    .customer-profile-header-info {
+        flex: 1 1 100%;
+
+        width: 100%;
+    }
+
+    .customer-profile-header-info h2 {
+        font-size: 22px;
+    }
+
+    .customer-profile-header-info p {
+        font-size: 13px;
+    }
+
+    .customer-account-badge {
+        font-size: 11px;
+    }
+
+    .customer-edit-button {
+        width: 100%;
+
+        min-height: 46px;
+    }
+
+    .customer-profile-body {
+        padding: 20px 18px;
+    }
+
+    .customer-profile-section-title {
+        margin-bottom: 20px;
+    }
+
+    .customer-profile-section-title > i {
+        width: 38px;
+        height: 38px;
+    }
+
+    .customer-profile-section-title h3 {
+        font-size: 17px;
+    }
+
+    .customer-profile-section-title p {
+        font-size: 12px;
+    }
+
+    .customer-profile-edit-actions {
+        flex-direction: column-reverse;
+
+        gap: 9px;
+    }
+
+    .customer-profile-edit-actions button {
+        width: 100%;
+    }
+
+    .customer-account-info {
+        padding: 20px 18px;
+
+        gap: 18px;
+    }
+
+    .customer-info-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .customer-profile-logout-modal {
+        width: 94%;
+
+        padding: 25px 20px;
+    }
+
+    .customer-logout-actions {
+        flex-direction: column-reverse;
+
+        gap: 9px;
+    }
+
+    .customer-logout-actions button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .customer-profile-brand span {
+        font-size: 17px !important;
+    }
+
+    .customer-profile-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .customer-profile-heading h1 {
+        font-size: 23px;
+    }
+
+    .customer-profile-header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .customer-profile-body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .customer-account-info {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

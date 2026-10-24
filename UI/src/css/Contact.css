@@ -1,0 +1,846 @@
+/* =========================================================
+   OORKARAN CONTACT PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.contact-page {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--dark);
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.contact-navbar {
+    position: relative;
+    z-index: 10;
+}
+
+.contact-dashboard-navbar {
+    position: relative;
+    z-index: 10;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.contact-hero {
+    padding: 72px 20px 48px;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            var(--light-blue) 0,
+            var(--transparent) 28%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            var(--orange-soft-2) 0,
+            var(--transparent) 22%
+        ),
+        var(--background);
+}
+
+.contact-header {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.contact-label {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 8px 17px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50px;
+
+    background: var(--light-blue);
+    color: var(--primary);
+
+    font-size: 0.76rem;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    box-shadow:
+        0 5px 18px var(--shadow-light);
+}
+
+.contact-header h1 {
+    margin: 0;
+
+    color: var(--dark);
+
+    font-size: clamp(2rem, 5vw, 3.3rem);
+    font-weight: 800;
+
+    line-height: 1.15;
+}
+
+.contact-header h1 span {
+    color: var(--primary);
+}
+
+.contact-header p {
+    max-width: 610px;
+
+    margin: 18px auto 0;
+
+    color: var(--text-muted);
+
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.contact-content {
+    padding: 12px 20px 85px;
+}
+
+
+/* =========================================================
+   INFORMATION CARD
+   ========================================================= */
+
+.contact-info-card {
+    position: relative;
+
+    height: 100%;
+
+    padding: 35px;
+
+    overflow: hidden;
+
+    background: var(--dark);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 45px var(--shadow-medium);
+}
+
+.contact-big-icon {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 23px;
+
+    border-radius: 18px;
+
+    background: var(--primary);
+    color: var(--dark);
+
+    font-size: 1.45rem;
+
+    box-shadow:
+        0 12px 28px var(--shadow-primary);
+}
+
+.contact-info-card h3 {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 12px;
+
+    color: var(--cards);
+
+    font-size: 1.55rem;
+    font-weight: 750;
+}
+
+.contact-info-card > p {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 0;
+
+    color: var(--gray-300);
+
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   INFORMATION ITEMS
+   ========================================================= */
+
+.contact-info-list {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 30px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid var(--contact-border-white);
+}
+
+.contact-info-item:last-child {
+    border-bottom: none;
+}
+
+.contact-info-icon {
+    flex: 0 0 44px;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: var(--backdrop-orange);
+    color: var(--primary);
+
+    font-size: 0.95rem;
+}
+
+.contact-info-item span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--text-light);
+
+    font-size: 0.73rem;
+    font-weight: 600;
+}
+
+.contact-info-item strong {
+    display: block;
+
+    color: var(--cards);
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   DECORATION
+   ========================================================= */
+
+.contact-info-decoration {
+    position: absolute;
+
+    right: -25px;
+    bottom: -28px;
+
+    display: flex;
+    flex-direction: column;
+
+    transform: rotate(-8deg);
+
+    opacity: 0.07;
+
+    color: var(--cards);
+
+    font-size: 5rem;
+    font-weight: 900;
+
+    line-height: 0.85;
+
+    pointer-events: none;
+}
+
+.contact-info-decoration span:last-child {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.contact-form-card {
+    padding: 35px;
+
+    background: var(--cards);
+
+    border: 1px solid var(--border-soft);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 38px var(--shadow-light);
+}
+
+
+/* =========================================================
+   FORM HEADING
+   ========================================================= */
+
+.contact-form-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 8px;
+}
+
+.form-small-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--primary);
+
+    font-size: 0.71rem;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+.contact-form-heading h3 {
+    margin: 0;
+
+    color: var(--dark);
+
+    font-size: 1.48rem;
+    font-weight: 750;
+}
+
+.form-heading-icon {
+    flex-shrink: 0;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: var(--light-blue);
+    color: var(--primary);
+
+    font-size: 1rem;
+}
+
+.contact-form-description {
+    margin-bottom: 27px;
+
+    color: var(--text-muted);
+
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+
+.contact-alert {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 12px;
+
+    font-size: 0.86rem;
+}
+
+.contact-alert-success {
+    color: var(--success);
+
+    background: var(--success-bg);
+
+    border-color: var(--success-border);
+}
+
+.contact-alert-danger {
+    color: var(--danger);
+
+    background: var(--danger-bg);
+
+    border-color: var(--danger-border);
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.contact-form-card .form-label {
+    margin-bottom: 7px;
+
+    color: var(--dark);
+
+    font-size: 0.86rem;
+    font-weight: 650;
+}
+
+.required-star {
+    margin-left: 4px;
+
+    color: var(--danger);
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.contact-input {
+    min-height: 49px;
+
+    padding: 11px 14px;
+
+    color: var(--dark);
+
+    background: var(--cards);
+
+    border: 1px solid var(--border-soft);
+
+    border-radius: 11px;
+
+    font-size: 0.89rem;
+
+    box-shadow: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.contact-input::placeholder {
+    color: var(--text-light);
+}
+
+.contact-input:focus {
+    color: var(--dark);
+
+    background: var(--cards);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px var(--shadow-primary-soft);
+}
+
+.contact-input:disabled {
+    background: var(--gray-50);
+
+    color: var(--text-muted);
+
+    cursor: not-allowed;
+}
+
+.contact-textarea {
+    min-height: 145px;
+
+    resize: vertical;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.contact-loading-box {
+    display: flex;
+    align-items: center;
+
+    min-height: 49px;
+
+    padding: 12px 14px;
+
+    color: var(--text-muted);
+
+    background: var(--gray-50);
+
+    border: 1px solid var(--border-soft);
+
+    border-radius: 11px;
+
+    font-size: 0.86rem;
+}
+
+
+/* =========================================================
+   NO BOOKINGS
+   ========================================================= */
+
+.no-bookings-box {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 16px;
+
+    background: var(--light-blue);
+
+    border: 1px solid var(--orange-border);
+
+    border-radius: 12px;
+}
+
+.no-bookings-box > i {
+    color: var(--primary);
+
+    font-size: 1.15rem;
+
+    margin-top: 2px;
+}
+
+.no-bookings-box strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--dark);
+
+    font-size: 0.87rem;
+}
+
+.no-bookings-box p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 0.79rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SELECTED SERVICE
+   ========================================================= */
+
+.selected-service-card {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 17px;
+
+    background: var(--light-blue);
+
+    border: 1px solid var(--orange-border);
+
+    border-radius: 14px;
+}
+
+.selected-service-icon {
+    flex: 0 0 47px;
+
+    width: 47px;
+    height: 47px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: var(--primary);
+    color: var(--dark);
+
+    font-size: 1rem;
+}
+
+.selected-service-details {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.selected-service-details > span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--primary);
+
+    font-size: 0.67rem;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.selected-service-details > strong {
+    display: block;
+
+    color: var(--dark);
+
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.selected-service-details p {
+    margin: 4px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 0.78rem;
+}
+
+.service-divider {
+    margin: 0 7px;
+
+    color: var(--text-light);
+}
+
+.selected-service-check {
+    color: var(--success);
+
+    font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   RATING
+   ========================================================= */
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    min-height: 51px;
+
+    padding: 8px 13px;
+
+    background: var(--background);
+
+    border: 1px solid var(--border-soft);
+
+    border-radius: 12px;
+}
+
+.rating-stars {
+    display: flex;
+    align-items: center;
+
+    gap: 3px;
+}
+
+.rating-star {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--transparent);
+
+    color: var(--gray-300);
+
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    transition:
+        color 0.15s ease,
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.rating-star:hover,
+.rating-star.active {
+    background: var(--light-blue);
+    color: var(--primary);
+}
+
+.rating-star:hover {
+    transform: scale(1.08);
+}
+
+.rating-star:focus-visible {
+    outline: 2px solid var(--primary);
+
+    outline-offset: 2px;
+}
+
+.rating-text {
+    color: var(--text-muted);
+
+    font-size: 0.79rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+.contact-submit-button {
+    width: 100%;
+
+    min-height: 51px;
+
+    margin-top: 4px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: var(--primary);
+    color: var(--dark);
+
+    font-size: 0.91rem;
+    font-weight: 750;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.contact-submit-button:hover:not(:disabled) {
+    background: var(--primary-accent);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px var(--shadow-primary);
+}
+
+.contact-submit-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.contact-submit-button:focus-visible {
+    outline: 3px solid var(--contact-primary-outline);
+
+    outline-offset: 2px;
+}
+
+.contact-submit-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991px) {
+    .contact-hero {
+        padding-top: 52px;
+    }
+
+    .contact-info-card {
+        height: auto;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .contact-hero {
+        padding: 45px 15px 32px;
+    }
+
+    .contact-content {
+        padding: 10px 15px 60px;
+    }
+
+    .contact-info-card,
+    .contact-form-card {
+        padding: 25px 20px;
+    }
+
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-header p br {
+        display: none;
+    }
+
+    .contact-form-heading h3 {
+        font-size: 1.25rem;
+    }
+
+    .form-heading-icon {
+        width: 43px;
+        height: 43px;
+    }
+
+    .selected-service-card {
+        align-items: flex-start;
+    }
+
+    .selected-service-check {
+        display: none;
+    }
+
+    .rating-container {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .contact-info-card,
+    .contact-form-card {
+        padding: 22px 16px;
+    }
+
+    .contact-big-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .contact-info-card h3 {
+        font-size: 1.35rem;
+    }
+
+    .rating-star {
+        width: 34px;
+        height: 34px;
+    }
+}
