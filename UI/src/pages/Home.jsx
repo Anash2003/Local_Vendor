@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "../App.css";
 import "../css/Home.css";
 
-const API_BASE_URL = "https://local-vendor-1.onrender.com/";
+const API_BASE_URL = "./api";
 
 // Font Awesome icons for categories
 const categoryIcons = {
