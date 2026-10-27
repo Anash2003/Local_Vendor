@@ -128,7 +128,7 @@ import os
 import dj_database_url
 DATABASES = {
         "default": dj_database_url.config(
-            default=os.getenv("DATABASE_URL"),
+            default="postgresql://anash:UtwSAjMARn4dy2HgJ73OmBafeUjeBfEL@dpg-dbg55k942hec73dkl0rg-a/oorkaran",
             conn_max_age=600,
             ssl_require=True,
         )
