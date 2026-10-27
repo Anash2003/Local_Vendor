@@ -8,7 +8,7 @@ function Customer_Profile({ setCustomerLoggedIn }) {
 
     const navigate = useNavigate();
 
-    const BASE_API = "http://127.0.0.1:8000";
+    const BASE_API = "./api";
 
     const customerId = localStorage.getItem("customer_id");
 

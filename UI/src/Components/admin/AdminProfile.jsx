@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 // Use the same host as your admin login.
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "./api";
 
 // Get a fresh CSRF token directly from Django.
 async function getCsrfToken() {

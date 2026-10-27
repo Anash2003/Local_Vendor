@@ -69,7 +69,7 @@ function CustomerDashboard({ setCustomerLoggedIn }) {
     // API
     // =========================================================
 
-    const BASE_API = "http://127.0.0.1:8000";
+    const BASE_API = "./api";
 
     const CATEGORY_API =
         `${BASE_API}/categories/`;

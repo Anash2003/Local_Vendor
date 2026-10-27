@@ -25,7 +25,7 @@ function Customer_Register({ setCustomerLoggedIn }) {
 
         try {
             const response = await axios.post(
-                "http://127.0.0.1:8000/customer/register/",
+                "./api/customer/register/",
                 {
                     name: name,
                     username: username,

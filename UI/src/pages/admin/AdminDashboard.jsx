@@ -10,7 +10,7 @@ import CategoriesServices from "../../pages/admin/CategoriesServices";
 import RatingsReviews from "./RatingsReviews";
 import AddAdmin from "../../pages/admin/AddAdmin";
 
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "./api";
 
 const INITIAL_STATS = {
   total_vendors: 0,

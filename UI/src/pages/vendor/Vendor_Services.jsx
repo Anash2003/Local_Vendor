@@ -31,7 +31,7 @@ function Vendor_Services() {
 
     const [error, setError] = useState("");
 
-    const API_BASE_URL = "http://127.0.0.1:8000";
+    const API_BASE_URL = "./api";
 
 
     // Load categories when page opens

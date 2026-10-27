@@ -30,7 +30,7 @@ function Vendor_Login({ setVendorLoggedIn }) {
 
         try {
             const response = await axios.post(
-                "http://127.0.0.1:8000/vendor/login/",
+                "./api/vendor/login/",
                 {
                     username,
                     password,

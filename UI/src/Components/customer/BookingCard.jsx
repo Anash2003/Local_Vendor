@@ -3,7 +3,7 @@ import axios from "axios";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import "../../App.css";
 
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "./api";
 
 function Booking() {
     const location = useLocation();

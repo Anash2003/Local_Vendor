@@ -37,7 +37,7 @@ function CustomerForgotPassword() {
             setLoading(true);
 
             const response = await axios.post(
-                'http://127.0.0.1:8000/customer/forgot-password/',
+                './api/customer/forgot-password/',
                 {
                     email: email
                 }
@@ -79,7 +79,7 @@ function CustomerForgotPassword() {
             setLoading(true);
 
             const response = await axios.post(
-                'http://127.0.0.1:8000/customer/verify-otp/',
+                './api/customer/verify-otp/',
                 {
                     email: email,
                     otp: otp
@@ -127,7 +127,7 @@ function CustomerForgotPassword() {
             setLoading(true);
 
             const response = await axios.post(
-                'http://127.0.0.1:8000/customer/reset-password/',
+                './api/customer/reset-password/',
                 {
                     email: email,
                     otp: otp,

@@ -6,7 +6,7 @@ import axios from "axios";
 import "../../css/CustomerLogin.css";
 import "../../App.css";
 
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "./api";
 
 // Axios configuration for Django session authentication
 const api = axios.create({

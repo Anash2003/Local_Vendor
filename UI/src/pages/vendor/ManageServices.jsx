@@ -14,7 +14,7 @@ function ManageServices() {
 
     const vendorId = localStorage.getItem("vendor_id");
 
-    const API_BASE_URL = "http://127.0.0.1:8000";
+    const API_BASE_URL = "./api";
 
     const [services, setServices] = useState([]);
 

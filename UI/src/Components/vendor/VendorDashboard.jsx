@@ -8,7 +8,7 @@ import "../../css/VendorDashboard.css";
 function VendorDashboard({ setVendorLoggedIn }) {
     const navigate = useNavigate();
 
-    const API_BASE_URL = "http://127.0.0.1:8000";
+    const API_BASE_URL = "./api";
 
     const [vendor, setVendor] = useState(null);
     const [bookings, setBookings] = useState([]);

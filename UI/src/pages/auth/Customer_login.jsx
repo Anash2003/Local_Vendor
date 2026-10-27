@@ -21,7 +21,7 @@ function Customer_Login({ setCustomerLoggedIn }) {
 
         try {
             const response = await axios.post(
-                "http://127.0.0.1:8000/customer/login/",
+                "./api/customer/login/",
                 {
                     username: username,
                     password: password

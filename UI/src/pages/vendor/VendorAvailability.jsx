@@ -106,7 +106,7 @@ function VendorAvailability() {
             console.log("Vendor ID:", vendorId);
 
             const response = await axios.get(
-                `http://127.0.0.1:8000/vendor/availability/${vendorId}/`
+                `./api/vendor/availability/${vendorId}/`
             );
 
             console.log("FULL RESPONSE:", response.data);
@@ -573,7 +573,7 @@ function VendorAvailability() {
 
 
             const response = await axios.post(
-                "http://127.0.0.1:8000/vendor/unavailable/add/",
+                "./api/vendor/unavailable/add/",
                 {
                     vendor: vendorId,
 
@@ -646,7 +646,7 @@ function VendorAvailability() {
 
 
             const response = await axios.delete(
-                "http://127.0.0.1:8000/vendor/unavailable/remove-range/",
+                "./api/vendor/unavailable/remove-range/",
                 {
                     data: {
 
@@ -737,7 +737,7 @@ function VendorAvailability() {
 
 
             const response = await axios.post(
-                "http://127.0.0.1:8000/vendor/weekly-off-exception/add/",
+                "./api/vendor/weekly-off-exception/add/",
                 {
                     vendor: vendorId,
                     date: formatDate(startDate)
